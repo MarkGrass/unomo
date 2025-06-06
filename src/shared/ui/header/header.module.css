@@ -1,0 +1,60 @@
+.header {
+    margin: var(--spacer-sm);
+    padding: 0 0 0 var(--spacer-lg);
+    min-height: 56px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    border-radius: var(--radius-lg);
+    background: var(--header-background);
+    backdrop-filter: blur(48px);
+    position: sticky;
+    z-index: var(--level-up);
+    top: var(--spacer-sm);
+    transition: background .3s;
+}
+
+.logo,
+.toggle {
+    position: relative;
+    z-index: 1;
+}
+
+.toggleIcon {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.logo svg {
+    width: 89px;
+    height: 24px;
+}
+
+.toggle {
+    padding: 0 var(--spacer-lg);
+}
+
+.toggle.expanded {
+    --icon-color: var(--color-black);
+}
+
+@media (min-width: 1199px) {
+    .header {
+        margin: auto;
+        padding: 0 var(--spacer-2xl);
+        height: 68px;
+        max-width: calc(var(--viewport-width) - (2 * var(--spacer-xl)));
+        top: var(--spacer-xl);
+    }
+
+    .toggle {
+        display: none;
+    }
+
+    .logo svg {
+        width: 120px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 1440px) {}

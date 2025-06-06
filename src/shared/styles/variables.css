@@ -1,0 +1,122 @@
+:root {
+    /* Spacing ======================== */
+    --spacer-2xs: 4px;
+    --spacer-xs: 8px;
+    --spacer-sm: 12px;
+    --spacer-md: 16px;
+    --spacer-lg: 20px;
+    --spacer-xl: 24px;
+    --spacer-2xl: 28px;
+    --spacer-3xl: 32px;
+    --spacer-4xl: 48px;
+
+    /* Radius ========================== */
+    --radius-2xs: 6px;
+    --radius-xs: 8px;
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 20px;
+    --radius-round: 9999px;
+
+    /* Levels ========================== */
+    --level-deep: -9999;
+    --level-down: -1;
+    --level-normal: 0;
+    --level-up: 1;
+    --level-over: 9999;
+
+    /* Text ============================ */
+    --font-primary: Inter, sans-serif;
+    --text-50: 8px/16px var(--font-primary);
+    --text-100: 14px/28px var(--font-primary);
+    --text-200: 14px/normal var(--font-primary);
+    --text-300: 16px/normal var(--font-primary);
+    --text-400: 18px/normal var(--font-primary);
+    --text-500: 20px/normal var(--font-primary);
+    --text-600: 24px/normal var(--font-primary);
+    --text-700: 28px/normal var(--font-primary);
+    --text-800: 30px/33px var(--font-primary);
+    --text-900: 40px/normal var(--font-primary);
+    --text-1000: 48px/normal var(--font-primary);
+
+    /* Colors ========================== */
+    --color-blue-100: #001f3f;
+    --color-blue-200: #002f5f;
+    --color-blue-300: #004389;
+    --color-blue-400: #0346d7;
+    --color-blue-500: #3f7afa;
+    --color-blue-600: #6f9dff;
+    --color-blue-700: #b5ccff;
+    --color-blue-800: #ecf2fe;
+    --color-blue-900: #f0f4ff;
+    --color-blue-rgba: 0 47 95;
+
+    --color-grey-50: #f2f2f2;
+    --color-grey-100: #7f7f7f;
+    --color-grey-200: #c6c6c6;
+
+    --color-red: #fa1111;
+    --color-red-alpha: 250 17 17;
+    --color-yellow: #dfb300;
+    --color-black: #222;
+    --color-black-alpha: 34 34 34;
+    --color-white: #fff;
+    --color-white-alpha: 255 255 255;
+    --color-primary: var(--color-blue-500);
+    --color-primary-alpha: 63 122 250;
+    --color-secondary: #e2ebfe;
+    --color-secondary-alpha: 226 235 254;
+
+    /* Color alias ===================== */
+    --border-color: rgb(var(--color-black-alpha) / 0.15);
+    --text-color: var(--color-black);
+    --additional-black: rgb(var(--color-black-alpha) / 0.5);
+    --additional-white: rgb(var(--color-white-alpha) / 0.5);
+    --muted-color: rgb(var(--color-white) / 0.6);
+    --root-cap-color: var(--gradient-root);
+    --header-background: rgb(var(--color-white-alpha) / 0.1);
+
+    /* Gradients ======================= */
+    --gradient-root: linear-gradient(
+        45deg,
+        var(--color-blue-100) 40%,
+        var(--color-blue-200)
+    );
+    --gradient-white: linear-gradient(var(--color-white), var(--color-white));
+    --gradient-primary: linear-gradient(
+        105.49deg,
+        var(--color-blue-100),
+        var(--color-blue-200)
+    );
+    --gradient-secondary: linear-gradient(
+        89.93deg,
+        var(--color-blue-100),
+        var(--color-blue-300)
+    );
+    --gradient-terthiary: linear-gradient(
+        155.7deg,
+        var(--color-blue-100) 15.55%,
+        var(--color-blue-200) 84.45%
+    );
+
+    /* Shadows ========================= */
+    --shadow-primary: 0 4px 12px 2px rgb(var(--color-black-alpha) / 0.08);
+
+    /* Viewports ======================= */
+    --viewport-mobile: 375px;
+    --viewport-tablet: 768px;
+    --viewport-desktop: 1440px;
+    --viewport-width: var(--viewport-mobile);
+}
+
+@media (min-width: 768px) {
+    :root {
+        --viewport-width: var(--viewport-tablet);
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        --viewport-width: var(--viewport-desktop);
+    }
+}

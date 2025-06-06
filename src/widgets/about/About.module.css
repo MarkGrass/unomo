@@ -1,0 +1,118 @@
+.about {
+    margin: 50px auto 0;
+    max-width: var(--viewport-width);
+    padding: var(--spacer-md);
+}
+
+.head {
+    margin-bottom: var(--spacer-3xl);
+    font: var(--text-600);
+    font-weight: 600;
+    max-width: 80%;
+}
+
+.founder {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto max-content;
+
+}
+
+.photo {
+    width: 343px;
+    height: 343px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    position: relative;
+}
+
+.photo img {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.caption {
+    padding: var(--spacer-md);
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: var(--color-white);
+}
+
+.name {
+    margin-bottom: var(--spacer-2xs);
+    font: var(--text-500);
+    font-weight: 600;
+}
+
+.position {
+    font: var(--text-200);
+    font-weight: 500;
+}
+
+.cite {
+    padding: var(--spacer-lg) 0 100px;
+    font: var(--text-200);
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.sign {
+    margin: auto;
+    display: block;
+}
+
+@media (min-width: 1199px) {
+    .about {
+        margin-top: 88px;
+        padding: var(--spacer-2xl) var(--spacer-4xl);
+    }
+    .founder {
+        display: grid;
+        grid-template-areas: 'photo head' 'photo cite';
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr auto;
+        grid-column-gap: var(--spacer-lg);
+        grid-row-gap: var(--spacer-lg);
+    }
+    .photo {
+        grid-area: photo;
+        width: 662px;
+        height: 460px;
+    }
+
+    .head {
+        margin: 0;
+        grid-area: head;
+        font: var(--text-900);
+        font-weight: 600;
+        max-width: 100%;
+    }
+
+    .caption {
+        padding: var(--spacer-3xl);
+    }
+
+    .name {
+        margin-bottom: var(--spacer-xs);
+        font: var(--text-600);
+        font-weight: 600;
+    }
+
+    .position {
+        font: var(--text-300);
+        font-weight: 500;
+    }
+
+    .cite {
+        grid-area: cite;
+        font: var(--text-400);
+        font-weight: 400;
+    }
+
+    .sign {
+        margin: var(--spacer-sm) var(--spacer-sm) auto auto;
+        width: 178px;
+    }
+}

@@ -1,0 +1,58 @@
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacer-xs);
+}
+
+.input {
+    margin: 0;
+
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+
+    position: absolute;
+    z-index: -1;
+}
+.label {
+    font: var(--text-100);
+    line-height: 20px;
+}
+
+.pointer {
+    --icon-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 24px;
+    height: 24px;
+
+    border-radius: var(--radius-2xs);
+    box-shadow: inset 0 0 0 2px var(--border-color);
+    transition: all .3s;
+}
+
+.pointer svg {
+    opacity: 0;
+
+    transition: all .3s;
+}
+
+.pointer:focus {
+    box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+
+.input:checked + .pointer {
+    box-shadow: inset 0 0 0 12px var(--color-primary);
+}
+
+.input:checked + .pointer svg {
+    opacity: 1;
+}
+
+.error .pointer {
+    box-shadow: inset 0 0 0 1px var(--color-red), 0 0 0 2px rgb(var(--color-red-alpha) / .3);
+}

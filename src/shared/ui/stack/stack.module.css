@@ -1,0 +1,102 @@
+.stack {
+    display: flex;
+}
+
+.inline {
+    display: inline-flex;
+}
+
+.full-width {
+    width: 100%;
+    max-width: var(--viewport-width);
+}
+
+.full-height {
+    flex: 1;
+
+    min-height: 100%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.gap-0 {
+    gap: 0;
+}
+
+.gap-xs {
+    gap: var(--spacer-xs);
+}
+
+.gap-sm {
+    gap: var(--spacer-sm);
+}
+
+.gap-md {
+    gap: var(--spacer-md);
+}
+
+.gap-lg {
+    gap: var(--spacer-lg);
+}
+
+.gap-xl {
+    gap: var(--spacer-xl);
+}

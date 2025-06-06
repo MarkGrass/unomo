@@ -1,0 +1,135 @@
+.main {
+    padding: var(--spacer-2xs) 0 var(--spacer-4xl);
+    background-color: var(--color-blue-100);
+    background-image: var(--gradient-primary);
+    text-align: center;
+    position: relative;
+}
+
+.main:before,
+.main:after {
+    content: '';
+    display: block;
+    height: 12px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.main:before {
+    background-image: var(--gradient-white);
+    z-index: var(--level-up);
+}
+.main:after {
+    background-image: var(--gradient-root);
+    z-index: var(--level-over);
+}
+
+.scrollOver:after {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: var(--viewport-width);
+}
+
+.title {
+    padding: 0 var(--spacer-md);
+    margin-top: var(--spacer-lg);
+    color: var(--color-white);
+}
+
+.description {
+    padding: 0 var(--spacer-md);
+    margin-top: var(--spacer-sm);
+    color: var(--additional-white);
+}
+
+.actions {
+    margin-top: var(--spacer-3xl);
+    padding: 0 var(--spacer-md);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacer-sm);
+}
+
+.action {
+    width: 100%;
+}
+
+@media (min-width: 1199px) {
+    .main {
+        padding: 62px 0 60px;
+        overflow: hidden;
+    }
+    .main:before,
+    .main:after {
+        height: 24px;
+    }
+
+    .wrapper {
+        display: flex;
+        text-align: left;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .welcome {
+        margin-right: -22px;
+        min-width: 648px;
+    }
+
+    .marker {
+        width: 56px;
+        top: 141px;
+        left: 49px;
+    }
+
+    .stats {
+        padding: var(--spacer-sm) var(--spacer-lg);
+        border-radius: var(--radius-sm);
+    }
+
+    .stats.clients {
+        bottom: 47px;
+        left: 92px;
+    }
+
+    .stats.cases {
+        bottom: 119px;
+        right: 65px;
+    }
+
+    .label {
+        font: var(--text-800);
+    }
+
+    .tips {
+        font: var(--text-100);
+    }
+
+    .info {
+        margin-top: -20px;
+        padding-left: 32px;
+    }
+
+    .description {
+        max-width: 80%;
+    }
+
+    .actions {
+        flex-direction: row;
+    }
+
+    .action {
+        width: auto;
+    }
+}

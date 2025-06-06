@@ -1,0 +1,211 @@
+.services {
+    margin: 81px auto 0;
+    max-width: var(--viewport-width);
+    padding: 0 var(--spacer-md);
+    overflow: hidden;
+}
+
+.header {
+    font: var(--text-600);
+    font-weight: 600;
+}
+
+.description {
+    margin-top: var(--spacer-xs);
+    color: var(--additional-black);
+    font: var(--text-200);
+    font-weight: 500;
+}
+
+.list {
+    padding: var(--spacer-3xl) 0 var(--spacer-4xl);
+    margin-bottom: calc(-1 * var(--spacer-md));
+    overflow: auto hidden;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: var(--spacer-sm);
+    flex-wrap: nowrap;
+}
+
+.service {
+    min-width: 240px;
+    padding: var(--spacer-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center var(--spacer-sm);
+    background-size: 106px 106px;
+}
+
+.auto {
+    background-image: url('../../shared/assets/ui/auto.png');
+}
+
+.taxes {
+    background-image: url('../../shared/assets/ui/taxes.png');
+}
+
+.work {
+    background-image: url('../../shared/assets/ui/work.png');
+}
+
+.civil {
+    background-image: url('../../shared/assets/ui/civil.png');
+}
+
+.estate {
+    background-image: url('../../shared/assets/ui/estate.png');
+}
+
+.consumer {
+    background-image: url('../../shared/assets/ui/consumer.png');
+}
+
+.insurance {
+    background-image: url('../../shared/assets/ui/insurance.png');
+}
+
+.family {
+    background-image: url('../../shared/assets/ui/family.png');
+}
+
+.construction {
+    background-image: url('../../shared/assets/ui/construction.png');
+}
+
+.land {
+    background-image: url('../../shared/assets/ui/land.png');
+}
+
+.banks {
+    background-image: url('../../shared/assets/ui/banks.png');
+}
+
+.fraud {
+    background-image: url('../../shared/assets/ui/fraud.png');
+}
+
+.title {
+    margin: 116px 0 var(--spacer-md);
+    font: var(--text-300);
+    font-weight: 600;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.link {
+    width: 100%;
+    margin: auto 0 0;
+}
+
+@media (min-width: 1199px) {
+    .services {
+        margin-top: 132px;
+        padding: 0 var(--spacer-4xl);
+    }
+
+    .header {
+        font: var(--text-900);
+        font-weight: 600;
+    }
+
+    .description {
+        margin-top: var(--spacer-xs);
+        font: var(--text-400);
+        font-weight: 500;
+    }
+
+    .list {
+        padding: var(--spacer-xl) 0 var(--spacer-4xl);
+        margin: var(--spacer-4xl) 0 0;
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: var(--spacer-lg);
+        grid-row-gap: var(--spacer-lg);
+    }
+
+    .service {
+        padding: var(--spacer-xl);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .auto {
+        background-position: calc(100% + 68px) 18px;
+        background-size: 212px 212px;
+    }
+
+    .taxes {
+        background-position: calc(100% + 50px) 22px;
+        background-size: 210px 210px;
+    }
+
+    .work {
+        background-position: calc(100% + 48px) 20px;
+        background-size: 210px 210px;
+    }
+
+    .civil {
+        background-position: calc(100% + 58px) 39px;
+        background-size: 204px 204px;
+    }
+
+    .estate {
+        background-position: calc(100% + 62px) 42px;
+        background-size: 210px 210px;
+    }
+
+    .consumer {
+        background-position: calc(100% + 56px) 40px;
+        background-size: 206px 206px;
+    }
+
+    .insurance {
+        background-position: calc(100% + 48px) 40px;
+        background-size: 206px 206px;
+    }
+
+    .family {
+        background-position: calc(100% + 46px) 28px;
+        background-size: 204px 204px;
+    }
+
+    .construction {
+        background-position: calc(100% + 56px) 28px;
+        background-size: 204px 204px;
+    }
+
+    .land {
+        background-position: calc(100% + 50px) 42px;
+        background-size: 204px 204px;
+    }
+
+    .banks {
+        background-position: calc(100% + 52px) 44px;
+        background-size: 204px 204px;
+    }
+
+    .fraud {
+        background-position: calc(100% + 48px) 30px;
+        background-size: 204px 204px;
+    }
+
+    .title {
+        margin: 0 0 var(--spacer-md);
+        font: var(--text-600);
+        font-weight: 600;
+        text-align: left;
+    }
+
+    .link {
+        width: 100%;
+        max-width: 170px;
+        margin: auto 0 0;
+    }
+}
