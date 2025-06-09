@@ -40,6 +40,10 @@
     max-width: 320px;
 }
 
+.white .link {
+    color: var(--color-black);
+}
+
 @media (min-width: 1199px) {
     .collapse {
         padding: 0;
@@ -68,5 +72,9 @@
 
     .call {
         margin: 0;
+    }
+
+    .white .link {
+        color: var(--color-black);
     }
 }

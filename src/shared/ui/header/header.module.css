@@ -8,9 +8,13 @@
     border-radius: var(--radius-lg);
     background: rgb(var(--color-white-alpha) / 0.1);
     backdrop-filter: blur(48px);
-    position: relative;
-    z-index: var(--level-up);
-    transition: background .3s;
+}
+
+.header.white {
+    background-color: var(--color-white);
+    backdrop-filter: none;
+    box-shadow: var(--shadow-primary);
+    color: var(--color-black);
 }
 
 .logo,
@@ -28,6 +32,9 @@
     width: 89px;
     height: 24px;
 }
+.white .toggle {
+    --icon-color: var(--color-black);
+}
 
 .toggle {
     padding: 0 var(--spacer-lg);
@@ -39,11 +46,10 @@
 
 @media (min-width: 1199px) {
     .header {
-        margin: auto;
+        margin: var(--spacer-xl) auto 0;
         padding: 0 var(--spacer-2xl);
         height: 68px;
         max-width: calc(var(--viewport-width) - (2 * var(--spacer-xl)));
-        top: var(--spacer-xl);
     }
 
     .toggle {
@@ -56,4 +62,5 @@
     }
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+}

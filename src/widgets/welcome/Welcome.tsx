@@ -1,6 +1,6 @@
 'use client';
 import type { FC } from 'react';
-import { Button, Typo } from '@ui';
+import { Button } from '@ui';
 import styles from './Welcome.module.css';
 
 import { Illustration } from './illustration';
@@ -27,7 +27,7 @@ export const Welcome: FC = () => {
                         <Button href="#application" className={styles.action}>
                             Получить консультацию
                         </Button>
-                        <Button className={styles.action} variant="outline">
+                        <Button href="/payment" className={styles.action} variant="outline">
                             Быстрая оплата
                         </Button>
                     </div>

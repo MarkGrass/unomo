@@ -2,6 +2,7 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import cn from 'clsx';
 import styles from './button.module.css';
+import Link from 'next/link';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'default' | 'outline' | 'ghost';
@@ -49,11 +50,11 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 
     if (href) {
         return (
-            <a aria-disabled={disabled} href={href} className={classes}>
+            <Link aria-disabled={disabled} href={href} className={classes}>
                 {iconLeft}
                 {children}
                 {iconRight}
-            </a>
+            </Link>
         );
     }
 

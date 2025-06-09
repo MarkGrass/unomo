@@ -6,7 +6,11 @@ import { Button, Navigation } from '@ui';
 import { CrossIcon, LogoIcon, MenuIcon } from '@icons';
 import cn, { clsx } from 'clsx';
 
-export const Header: FC = () => {
+type HeaderProps = {
+    color?: 'default' | 'white';
+};
+
+export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
     const [expanded, setExpanded] = useState(false);
 
     const toggleMenu = () => {
@@ -18,6 +22,7 @@ export const Header: FC = () => {
         <header
             className={clsx({
                 [styles.header]: true,
+                [styles[color]]: true,
             })}
         >
             <Button className={styles.logo} href="/" variant="ghost">
@@ -29,13 +34,15 @@ export const Header: FC = () => {
                 variant="ghost"
                 onClick={toggleMenu}
                 iconRight={
-                    expanded ?
-                    <CrossIcon className={styles.toggleIcon} /> :
-                    <MenuIcon className={styles.toggleIcon} />
+                    expanded ? (
+                        <CrossIcon className={styles.toggleIcon} />
+                    ) : (
+                        <MenuIcon className={styles.toggleIcon} />
+                    )
                 }
             />
 
-            <Navigation visible={expanded} onExpand={onMenuExpand} />
+            <Navigation color={color} visible={expanded} onExpand={onMenuExpand} />
         </header>
     );
 };

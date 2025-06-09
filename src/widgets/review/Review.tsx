@@ -1,6 +1,6 @@
 'use client';
 import { FC, useEffect, useRef, useState } from 'react';
-import { Button, Card, CardColor, Stars, Typo } from '@ui';
+import { Button, Card, CardColor, Stars } from '@ui';
 import styles from './Review.module.css';
 import cn from 'clsx';
 
@@ -104,10 +104,10 @@ export const Review: FC = () => {
                             as="figure"
                             color={card.color as CardColor}
                         >
-                            <Typo className={styles.message} as="cite">{card.message}</Typo>
+                            <cite className={styles.message}>{card.message}</cite>
 
                             <footer className={styles.rate}>
-                                <Typo>{card.author}</Typo>
+                                <p>{card.author}</p>
                                 <Stars count={card.stars} />
                             </footer>
                         </Card>

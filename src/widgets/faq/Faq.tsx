@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Faq.module.css';
-import { Accordion, Typo } from '@ui';
+import { Accordion } from '@ui';
 
 export const Faq: FC = () => {
     const questions = [

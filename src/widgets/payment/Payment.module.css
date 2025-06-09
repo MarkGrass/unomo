@@ -1,0 +1,112 @@
+.payment {
+    padding: var(--spacer-md);
+    max-width: 600px;
+}
+.form {
+    margin-top: var(--spacer-3xl);
+}
+.control {
+    margin-bottom: var(--spacer-lg);
+}
+.action {
+    width: 100%;
+}
+
+.info {
+    text-align: center;
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 500;
+    color: var(--additional-black);
+}
+
+.info p {
+    margin-top: var(--spacer-sm);
+}
+
+.commission {
+    margin-bottom: var(--spacer-2xs);
+    font: var(--text-200);
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+.legalAddress:not([open]) .close {
+    display: none;
+}
+
+.legalAddress:not([open]) .open {
+    display: block;
+}
+
+.legalAddress[open] .open {
+    display: none;
+}
+
+.legalAddress[open] .close {
+    display: block;
+}
+
+.legalAddress {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.legalAddress summary {
+    font-size: 12px;
+    line-height: normal;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.legalAddress summary::marker {
+    content: '';
+}
+
+.legalAddress p {
+    padding: var(--spacer-lg) 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacer-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.group {
+    font-weight: 700;
+}
+
+.legalAddress .label {
+    min-width: 120px;
+}
+
+.qrcode {
+    width: 343px;
+    height: 343px;
+}
+
+@media (min-width: 1199px) {
+    .payment {
+        margin: auto;
+    }
+
+    .control {
+        margin-bottom: var(--spacer-xl);
+    }
+
+    .legalAddress {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .legalAddress .label {
+        min-width: 142px;
+    }
+    .qrcode {
+        width: 600px;
+        height: 600px;
+    }
+}

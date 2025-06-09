@@ -10,6 +10,7 @@ import { Application } from '@widgets/application';
 import { Review } from '@widgets/review';
 import { Faq } from '@widgets/faq';
 import { Stats } from '@widgets/stats';
+import cn from 'clsx';
 
 const interFont = Inter({
     variable: '--font-primary',
@@ -29,8 +30,8 @@ export default function RootLayout({
     children: ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className={interFont.variable}>
+        <html lang="ru">
+            <body className={cn("root", interFont.variable)}>
                 <Header />
                 <main>
                     {children}

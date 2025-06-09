@@ -124,6 +124,13 @@
         overflow: visible;
     }
 
+    .message {
+        font-weight: 400;
+    }
+    .rate {
+        margin-top: var(--spacer-sm);
+    }
+
     .item {
         max-width: 320px;
         height: auto;

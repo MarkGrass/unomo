@@ -26,6 +26,7 @@ import GeneralCounselImage from './content/general-counsel.jpg';
 import LeadAdvisorImage from './content/lead-advisor.jpg';
 import AdvisorImage from './content/advisor.jpg';
 import AssistantImage from './content/assistant.jpg';
+import PaymentImage from './content/payment.jpg';
 
 export {
     AppImage,
@@ -53,4 +54,5 @@ export {
     LeadAdvisorImage,
     AdvisorImage,
     AssistantImage,
+    PaymentImage
 };
