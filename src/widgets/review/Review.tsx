@@ -85,7 +85,7 @@ export const Review: FC = () => {
     }, [activeSlide, isInteraction]);
 
     return (
-        <section id="review" className={styles.review}>
+        <section id="reviews" className={styles.review}>
             <h2 className={styles.head}>Каждый отзыв — это история решённого вопроса</h2>
 
             <div className={styles.wrapper}>

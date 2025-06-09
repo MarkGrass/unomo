@@ -36,6 +36,8 @@
 }
 
 .call {
+    --button-color: var(--color-primary);
+    --button-border: var(--color-primary);
     margin: 0 auto var(--spacer-xl);
     max-width: 320px;
 }
@@ -71,6 +73,8 @@
     }
 
     .call {
+        --button-color: var(--color-white);
+        --button-border: var(--color-white);
         margin: 0;
     }
 

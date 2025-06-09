@@ -1,6 +1,6 @@
 .payment {
     padding: var(--spacer-md);
-    max-width: 600px;
+    max-width: 632px;
 }
 .form {
     margin-top: var(--spacer-3xl);
@@ -90,11 +90,11 @@
 
 @media (min-width: 1199px) {
     .payment {
-        margin: auto;
+        margin: 72px auto var(--spacer-3xl);
     }
 
     .control {
-        margin-bottom: var(--spacer-xl);
+        margin-bottom: var(--spacer-2xl);
     }
 
     .legalAddress {
@@ -105,6 +105,7 @@
     .legalAddress .label {
         min-width: 142px;
     }
+
     .qrcode {
         width: 600px;
         height: 600px;

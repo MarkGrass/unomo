@@ -1,5 +1,6 @@
-.main {
-    padding: calc(56px + var(--spacer-2xl)) 0 var(--spacer-4xl);
+.auto {
+    overflow: hidden;
+    padding: var(--spacer-2xs) 0 var(--spacer-4xl);
     background-color: var(--color-blue-100);
     background-image: var(--gradient-primary);
     text-align: center;
@@ -25,7 +26,10 @@
     color: var(--additional-white);
     font: var(--text-200);
 }
-
+.info {
+    position: relative;
+    z-index: 5;
+}
 .actions {
     margin-top: var(--spacer-3xl);
     padding: 0 var(--spacer-md);
@@ -41,8 +45,8 @@
 }
 
 @media (min-width: 1199px) {
-    .main {
-        padding: 132px 0 60px;
+    .auto {
+        padding: 40px 0 60px;
         overflow: hidden;
     }
 

@@ -49,7 +49,7 @@ export const Navigation: FC<NavigationProps> = ({
             <Button
                 className={styles.call}
                 variant="outline"
-                color={color === 'white' ? 'primary' : 'secondary'}
+                color="secondary"
                 href="tel:+7 968 461 14 36"
                 size="sm"
                 iconLeft={<PhoneIcon className={styles.callIcon} />}

@@ -78,29 +78,47 @@
     background-color: transparent;
 }
 
-.outline.primary,
-.outline.secondary {
+.outline.primary {
     border-color: var(--color-blue-500);
     color: var(--color-blue-500);
 }
 .outline.primary:hover,
-.outline.secondary:hover,
-.outline.primary:focus-visible,
-.outline.secondary:focus-visible {
+.outline.primary:focus-visible {
     border-color: var(--color-blue-600);
     color: var(--color-blue-600);
 }
-.outline.primary:active,
-.outline.secondary:active {
+.outline.primary:active {
     border-color: var(--color-blue-400);
     color: var(--color-blue-400);
 }
 .outline.primary.disabled,
-.outline.secondary.disabled,
-.outline.primary[disabled] .outline.secondary[disabled] {
+.outline.primary[disabled] {
     border-color: var(--color-grey-100);
     color: var(--color-grey-100);
 }
+
+
+.outline.secondary {
+    border-color: var(--button-border, var(--color-white));
+    color: var(--button-color, var(--color-white));
+}
+
+.outline.secondary:hover,
+.outline.secondary:focus-visible {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-black);
+}
+.outline.secondary:active {
+    background-color: var(--color-grey-200);
+    border-color: var(--color-grey-200);
+    color: var(--color-black);
+}
+.outline.secondary.disabled,
+.outline.secondary[disabled] {
+    color: var(--color-grey-100);
+}
+
 
 .ghost {
     background-color: transparent;
@@ -112,27 +130,4 @@
 .ghost:hover,
 .ghost:focus {
     text-decoration: underline;
-}
-
-@media (min-width: 1199px) {
-    .outline.secondary {
-        border-color: var(--color-white);
-        color: var(--color-white);
-    }
-
-    .outline.secondary:hover,
-    .outline.secondary:focus-visible {
-        background-color: var(--color-white);
-        border-color: var(--color-white);
-        color: var(--color-black);
-    }
-    .outline.secondary:active {
-        background-color: var(--color-grey-200);
-        border-color: var(--color-grey-200);
-        color: var(--color-black);
-    }
-    .outline.secondary.disabled,
-    .outline.secondary[disabled] {
-        color: var(--color-grey-100);
-    }
 }

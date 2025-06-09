@@ -1,0 +1,36 @@
+.break {
+    display: none;
+}
+
+.h1 {
+    font: var(--text-700);
+    font-weight: 600;
+}
+
+.h2 {
+    font: var(--text-600);
+    font-weight: 600;
+}
+
+.h3 {
+    font: var(--text-600);
+    font-weight: 600;
+}
+
+@media (min-width: 1199px) {
+    .break {
+        display: initial;
+    }
+
+    .h1 {
+        font: var(--text-1000);
+    }
+
+    .h2 {
+        font: var(--text-900);
+    }
+
+    .h3 {
+        font: var(--text-850);
+    }
+}

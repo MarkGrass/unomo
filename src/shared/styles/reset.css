@@ -24,19 +24,9 @@ html {
     color: var(--color-black);
 }
 
-html {
-    background-color: var(--color-white);
-}
-
 body {
     scroll-behavior: smooth;
     overscroll-behavior: none;
-}
-
-.root {
-    background-image: var(--gradient-root);
-    background-size: auto 120px;
-    background-repeat: no-repeat;
 }
 
 html:focus-within {

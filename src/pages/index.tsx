@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Welcome } from '@widgets/welcome';
 import RootLayout from '../app/root-layout';
 
-const Main: FC = () => {
+const MainPage: FC = () => {
     return (
         <RootLayout>
             <Welcome />
@@ -10,4 +10,4 @@ const Main: FC = () => {
     );
 };
 
-export default Main;
+export default MainPage;

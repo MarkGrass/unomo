@@ -30,7 +30,7 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
 
                 <div className={styles.actions}>
                     <Button className={styles.action}>Получить консультацию</Button>
-                    <Button className={styles.action} variant="outline">
+                    <Button className={styles.action} color="secondary" variant="outline">
                         Быстрая оплата
                     </Button>
                 </div>

@@ -11,13 +11,29 @@
     font-weight: 600;
 }
 
+.message {
+    margin-top: var(--spacer-xs);
+    color: var(--additional-black);
+}
+
+.illustration {
+    margin: var(--spacer-sm) auto var(--spacer-lg);
+    width: 273px;
+}
+
+.illustration img {
+    width: 100%;
+}
+
+.colored {
+    background-color: var(--color-blue-800);
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .list {
-    padding-top: 348px;
-    background-image: url('../../shared/assets/ui/service.png');
-    background-repeat: no-repeat;
-    background-size: 273px;
-    background-position: center var(--spacer-sm);
-    list-style: none;
 }
 
 .stage {
@@ -30,10 +46,9 @@
 }
 
 .stage:before {
-    content: attr(data-count);
-    font: var(--text-400);
-    font-weight: 600;
+    padding-top: 3px;
     grid-area: couter;
+    content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M21.5602 5.23946C21.8411 5.52071 21.9988 5.90196 21.9988 6.29946C21.9988 6.69696 21.8411 7.07821 21.5602 7.35946L9.36617 19.5535C9.2254 19.6941 9.05805 19.8053 8.87387 19.8806C8.6897 19.956 8.49238 19.9939 8.2934 19.9922C8.09442 19.9906 7.89776 19.9493 7.71488 19.8709C7.532 19.7925 7.36655 19.6784 7.22817 19.5355L2.42217 14.5675C2.14809 14.2811 1.99852 13.8978 2.00614 13.5015C2.01376 13.1052 2.17796 12.728 2.46284 12.4523C2.74773 12.1767 3.13015 12.025 3.52652 12.0305C3.92289 12.0359 4.30098 12.1981 4.57817 12.4815L8.32417 16.3535L19.4402 5.23946C19.7214 4.95856 20.1027 4.80078 20.5002 4.80078C20.8977 4.80078 21.2789 4.95856 21.5602 5.23946Z' fill='%233F7AFA' /%3E%3C/svg%3E");
     width: 32px;
     min-width: 32px;
     height: 32px;
@@ -42,8 +57,16 @@
     justify-content: center;
     border-radius: var(--radius-round);
     background-color: var(--color-blue-900);
-    color: var(--color-primary);
 }
+
+.stage.count:before {
+    padding: 0;
+    font: var(--text-400);
+    font-weight: 600;
+    color: var(--color-primary);
+    content: attr(data-count);
+}
+
 
 .title {
     grid-area: title;
@@ -65,7 +88,7 @@
 
 @media (min-width: 1199px) {
     .stages {
-        margin-top: 132px;
+        margin-top: 140px;
         padding: 0 var(--spacer-4xl);
     }
 
@@ -78,11 +101,29 @@
         font-weight: 600;
     }
 
+    .message {
+        margin: var(--spacer-sm) 0 var(--spacer-md);
+        max-width: 65%;
+    }
+
+
     .list {
-        padding-top: var(--spacer-3xl);
-        padding-left: 51%;
-        background-size: 544px;
-        background-position: var(--spacer-3xl) 65%;
+        padding: var(--spacer-3xl) 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8%;
+    }
+
+    .illustration {
+        margin-left: var(--spacer-3xl);
+        min-width: 544px;
+    }
+
+    .colored {
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: stretch;
     }
 
     .stage {
@@ -91,10 +132,13 @@
     }
 
     .stage:before {
+        content: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M21.5602 5.23946C21.8411 5.52071 21.9988 5.90196 21.9988 6.29946C21.9988 6.69696 21.8411 7.07821 21.5602 7.35946L9.36617 19.5535C9.2254 19.6941 9.05805 19.8053 8.87387 19.8806C8.6897 19.956 8.49238 19.9939 8.2934 19.9922C8.09442 19.9906 7.89776 19.9493 7.71488 19.8709C7.532 19.7925 7.36655 19.6784 7.22817 19.5355L2.42217 14.5675C2.14809 14.2811 1.99852 13.8978 2.00614 13.5015C2.01376 13.1052 2.17796 12.728 2.46284 12.4523C2.74773 12.1767 3.13015 12.025 3.52652 12.0305C3.92289 12.0359 4.30098 12.1981 4.57817 12.4815L8.32417 16.3535L19.4402 5.23946C19.7214 4.95856 20.1027 4.80078 20.5002 4.80078C20.8977 4.80078 21.2789 4.95856 21.5602 5.23946Z' fill='%233F7AFA' /%3E%3C/svg%3E");
         margin-left: -4px;
         width: 48px;
         min-width: 48px;
         height: 48px;
+    }
+    .stage.count:before {
         font: var(--text-600);
         font-weight: 600;
     }
@@ -109,7 +153,7 @@
     }
 
     .call {
-        margin: 43px auto 0;
+        margin: var(--spacer-xs) auto 0;
         display: flex;
         align-items: center;
         justify-content: center;

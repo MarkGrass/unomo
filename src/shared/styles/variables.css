@@ -29,15 +29,16 @@
     --font-primary: Inter, sans-serif;
     --text-50: 8px/16px var(--font-primary);
     --text-100: 14px/28px var(--font-primary);
-    --text-200: 14px/normal var(--font-primary);
-    --text-300: 16px/normal var(--font-primary);
-    --text-400: 18px/normal var(--font-primary);
-    --text-500: 20px/normal var(--font-primary);
-    --text-600: 24px/normal var(--font-primary);
-    --text-700: 28px/normal var(--font-primary);
+    --text-200: 14px / normal var(--font-primary);
+    --text-300: 16px / normal var(--font-primary);
+    --text-400: 18px / normal var(--font-primary);
+    --text-500: 20px / normal var(--font-primary);
+    --text-600: 24px / normal var(--font-primary);
+    --text-700: 28px / normal var(--font-primary);
     --text-800: 30px/33px var(--font-primary);
-    --text-900: 40px/normal var(--font-primary);
-    --text-1000: 48px/normal var(--font-primary);
+    --text-850: 32px / normal var(--font-primary);
+    --text-900: 40px / normal var(--font-primary);
+    --text-1000: 48px / normal var(--font-primary);
 
     /* Colors ========================== */
     --color-blue-100: #001f3f;
@@ -82,7 +83,6 @@
         var(--color-blue-100) 40%,
         var(--color-blue-200)
     );
-    --gradient-white: linear-gradient(var(--color-white), var(--color-white));
     --gradient-primary: linear-gradient(
         105.49deg,
         var(--color-blue-100),
