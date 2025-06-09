@@ -14,9 +14,14 @@
     vertical-align: baseline;
 }
 
+:root {
+    interpolate-size: allow-keywords;
+}
+
 body,
 html {
     font-family: Inter, sans-serif;
+    color: var(--color-black);
 }
 
 html {

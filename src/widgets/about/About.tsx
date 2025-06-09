@@ -14,7 +14,7 @@ export const About: FC = () => {
     const { isMobile } = useResize();
 
     return (
-        <section className={styles.about}>
+        <section id="about" className={styles.about}>
             <article className={styles.founder}>
                 <h2 className={styles.head}>Правовая поддержка на все случаи жизни</h2>
 

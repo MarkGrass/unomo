@@ -65,7 +65,7 @@
 
 @media (min-width: 1199px) {
     .about {
-        margin-top: 88px;
+        margin-top: 82px;
         padding: var(--spacer-2xl) var(--spacer-4xl);
     }
     .founder {
@@ -114,5 +114,9 @@
     .sign {
         margin: var(--spacer-sm) var(--spacer-sm) auto auto;
         width: 178px;
+    }
+
+    .employees {
+        margin-top: 70px;
     }
 }

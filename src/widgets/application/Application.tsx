@@ -25,7 +25,7 @@ export const Application: FC = () => {
     };
 
     return (
-        <section className={styles.application}>
+        <section id="application" className={styles.application}>
             <h2 className={styles.header}>
                 Расскажите, что случилось —<br className={styles.break} />
                 поможем разобраться!

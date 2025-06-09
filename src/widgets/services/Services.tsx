@@ -80,7 +80,7 @@ export const Services: FC = () => {
         },
     ];
     return (
-        <section className={styles.services}>
+        <section id="services" className={styles.services}>
             <h2 className={styles.header}>Помогаем с решением любых правовых вопросов</h2>
             <p className={styles.description}>
                 Более 20 юристов в штате, которые помогут с любым вопросом

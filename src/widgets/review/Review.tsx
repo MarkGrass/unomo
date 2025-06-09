@@ -1,6 +1,8 @@
-import { FC } from 'react';
+'use client';
+import { FC, useEffect, useRef, useState } from 'react';
 import { Button, Card, CardColor, Stars, Typo } from '@ui';
 import styles from './Review.module.css';
+import cn from 'clsx';
 
 export const Review: FC = () => {
     const cards = [
@@ -61,21 +63,76 @@ export const Review: FC = () => {
             color: 'primary',
         },
     ];
+    const initialState = Array(cards.length).fill(null);
+    const slidesRef = useRef<(HTMLElement | null)[]>(initialState);
+    const [isInteraction, setIsInteraction] = useState(false);
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    const handleClick = (index: number) => {
+        setIsInteraction(true);
+        setActiveSlide(index);
+    };
+
+    useEffect(() => {
+        if (isInteraction) {
+            setIsInteraction(false);
+            slidesRef.current[activeSlide]?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'start',
+            });
+        }
+    }, [activeSlide, isInteraction]);
+
     return (
-        <section className={styles.review}>
-            <Typo>Каждый отзыв — это история решённого вопроса</Typo>
-            <div className={styles.cloud}>
-                {cards.map((card) => (
-                    <Card key={card.key} as="figure" color={card.color as CardColor}>
-                        <Typo as="cite">{card.message}</Typo>
-                        <footer>
-                            <Typo>{card.author}</Typo>
-                            <Stars count={card.stars} />
-                        </footer>
-                    </Card>
+        <section id="review" className={styles.review}>
+            <h2 className={styles.head}>Каждый отзыв — это история решённого вопроса</h2>
+
+            <div className={styles.wrapper}>
+                {cards.map((card, index) => (
+                    <div
+                        ref={(c) => {
+                            if (c) {
+                                slidesRef.current[index] = c;
+                            }
+                        }}
+                        className={styles.item}
+                        key={card.key}
+                    >
+                        <Card
+                            className={styles.card}
+                            as="figure"
+                            color={card.color as CardColor}
+                        >
+                            <Typo className={styles.message} as="cite">{card.message}</Typo>
+
+                            <footer className={styles.rate}>
+                                <Typo>{card.author}</Typo>
+                                <Stars count={card.stars} />
+                            </footer>
+                        </Card>
+                    </div>
                 ))}
             </div>
-            <Button>Получить консультацию</Button>
+
+            <footer>
+                <div className={styles.pointer}>
+                    {cards.map(({ key, author }, index) => (
+                        <div
+                            key={key}
+                            role="button"
+                            aria-label={author}
+                            className={cn({
+                                [styles.point]: true,
+                                [styles.active]: activeSlide === index,
+                            })}
+                            onClick={() => handleClick(index)}
+                        ></div>
+                    ))}
+                </div>
+
+                <Button href="#application" className={styles.action}>Получить консультацию</Button>
+            </footer>
         </section>
     );
 };

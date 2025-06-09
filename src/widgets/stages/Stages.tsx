@@ -37,7 +37,7 @@ export const Stages: FC = () => {
     ];
 
     return (
-        <section className={styles.stages}>
+        <section id="stages" className={styles.stages}>
             <h2 className={styles.head}>
                 Этапы взаимодействия с нашей
                 <br className={styles.break} /> юридической командой

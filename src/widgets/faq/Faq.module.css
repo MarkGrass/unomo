@@ -1,0 +1,25 @@
+.faq {
+    margin: 68px auto 0;
+    padding: var(--spacer-md);
+    max-width: var(--viewport-width);
+}
+
+.head {
+    margin-bottom: var(--spacer-sm);
+    font: var(--text-600);
+    font-weight: 600;
+}
+
+@media (min-width: 1199px) {
+    .faq {
+        margin-top: 165px;
+        padding: 0 var(--spacer-4xl);
+    }
+
+    .head {
+        margin: auto;
+        text-align: center;
+        font: var(--text-900);
+        font-weight: 600;
+    }
+}

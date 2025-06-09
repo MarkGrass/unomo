@@ -6,11 +6,10 @@
     grid-template-columns: auto 1fr;
     align-items: center;
     border-radius: var(--radius-lg);
-    background: var(--header-background);
+    background: rgb(var(--color-white-alpha) / 0.1);
     backdrop-filter: blur(48px);
-    position: sticky;
+    position: relative;
     z-index: var(--level-up);
-    top: var(--spacer-sm);
     transition: background .3s;
 }
 
