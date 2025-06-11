@@ -23,12 +23,10 @@ export default function DarkLayout({
     children: ReactNode;
 }>) {
     return (
-        <html lang="ru">
-            <body className={cn('root', interFont.variable)}>
-                <Header />
-                <main>{children}</main>
-                <Footer />
-            </body>
-        </html>
+        <div className={cn('root', interFont.variable)}>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </div>
     );
 }

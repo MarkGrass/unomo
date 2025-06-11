@@ -22,12 +22,10 @@ export default function LightLayout({
     children: ReactNode;
 }>) {
     return (
-        <html lang="ru">
-            <body className={interFont.variable}>
-                <Header color="white" />
-                <main>{children}</main>
-                <Footer />
-            </body>
-        </html>
+        <div className={interFont.variable}>
+            <Header color="white" />
+            <main>{children}</main>
+            <Footer />
+        </div>
     );
 }
