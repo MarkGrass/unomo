@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { LegalImage, WorkImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const CivilPage: FC = () => {
     const stages = [
@@ -52,15 +54,15 @@ const CivilPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                title="Суды и гражданские споры"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
-                meta="Суды и гражданские споры"
                 illustration={WorkImage}
+                meta="Суды и гражданские споры"
+                stageDescription="Подготовим документы, оценим перспективы, защитим ваши интересы на всех стадиях разбирательства — от консультации до суда."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением гражданских споров"
                 stageTitle="Помогаем с решением гражданских споров"
-                stageDescription="Подготовим документы, оценим перспективы, защитим ваши интересы на всех стадиях разбирательства — от консультации до суда."
+                stages={stages}
+                title="Суды и гражданские споры"
             />
         </RootLayout>
     );

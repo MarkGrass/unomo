@@ -1,25 +1,28 @@
 'use client';
-import { FC } from 'react';
-import { MarkIcon } from '@icons';
+import type { FC } from 'react';
+
+import cn from 'clsx';
 import Image from 'next/image';
+
 import { WelcomeImage } from '@assets';
 import { useResize } from '@hooks';
-import cn from 'clsx';
+import { MarkIcon } from '@icons';
+
 import styles from './illustration.module.css';
 
 export const Illustration: FC = () => {
     const { isMobile } = useResize();
 
     return (
-        <div className={styles.welcome} role="img" aria-label="Результаты работы Unomo">
+        <div aria-label="Результаты работы Unomo" className={styles.welcome} role="img">
             <MarkIcon className={styles.marker} />
 
             <Image
                 priority
-                src={WelcomeImage}
                 alt=""
-                width={isMobile ? 375 : 648}
                 height={isMobile ? 330 : 570}
+                src={WelcomeImage}
+                width={isMobile ? 375 : 648}
             />
 
             <div className={cn(styles.stats, styles.clients)}>

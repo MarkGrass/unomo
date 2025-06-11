@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { FraudImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const FraudPage: FC = () => {
     const stages = [
@@ -45,16 +47,16 @@ const FraudPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                meta="Мошенничество"
-                title="Мошенничество"
                 description="Дадим чёткий план действий и начнём помогать уже с первой
                             консультации - без лишних затрат и потери времени!"
                 illustration={FraudImage}
+                meta="Мошенничество"
+                stageDescription="Если стали жертвой мошенников — действуем через суд, банк и правоохранительные органы. Поможем даже в самых сложных ситуациях: с кредитами, продажей квартиры, переводами."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением дел о мошенничестве"
                 stageTitle="Помогаем с решением дел о мошенничестве"
-                stageDescription="Если стали жертвой мошенников — действуем через суд, банк и правоохранительные органы. Поможем даже в самых сложных ситуациях: с кредитами, продажей квартиры, переводами."
+                stages={stages}
+                title="Мошенничество"
             />
         </RootLayout>
     );

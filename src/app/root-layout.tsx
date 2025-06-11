@@ -1,22 +1,15 @@
-import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Inter } from 'next/font/google';
-import { Footer, Header } from '@ui';
+
+import type { Metadata } from 'next';
+
+import { ServiceImage } from '@assets';
+import { Footer, Header, Meta } from '@ui';
 import '@shared/styles/index.css';
 import { About } from '@widgets/about';
-import { Stages } from '@widgets/stages';
 import { Application } from '@widgets/application';
-import { Review } from '@widgets/review';
 import { Faq } from '@widgets/faq';
-import cn from 'clsx';
-import { ServiceImage } from '@assets';
-
-const interFont = Inter({
-    variable: '--font-primary',
-    subsets: ['cyrillic', 'latin'],
-    style: ['normal', 'italic'],
-    weight: ['400', '500', '600', '700'],
-});
+import { Review } from '@widgets/review';
+import { Stages } from '@widgets/stages';
 
 export const metadata: Metadata = {
     title: 'Unomo',
@@ -62,29 +55,31 @@ export default function RootLayout({
     ];
 
     return (
-        <div className={cn('root', interFont.variable)}>
+        <>
+            <Meta />
+
             <Header />
             <main>
                 {children}
                 <About />
                 <Stages
+                    counter
                     id="stages"
+                    image={ServiceImage}
+                    meta="Этапы взаимодействия с Unomo"
+                    stages={stages}
                     title={
                         <>
                             Этапы взаимодействия с нашей
                             <br className="break" /> юридической командой
                         </>
                     }
-                    meta="Этапы взаимодействия с Unomo"
-                    image={ServiceImage}
-                    counter
-                    stages={stages}
                 />
                 <Application />
                 <Review />
                 <Faq />
             </main>
             <Footer />
-        </div>
+        </>
     );
 }

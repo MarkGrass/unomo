@@ -1,5 +1,7 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+
 import { Welcome } from '@widgets/welcome';
+
 import RootLayout from '../app/root-layout';
 
 const MainPage: FC = () => {

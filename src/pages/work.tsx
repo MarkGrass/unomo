@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
+import type { FC } from 'react';
+
 import { LegalImage, WorkImage } from '@assets';
 import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const WorkPage: FC = () => {
     const stages = [
@@ -14,8 +16,7 @@ const WorkPage: FC = () => {
         {
             key: '2',
             title: 'Невыплата заработной платы',
-            description:
-                'Взыщем зарплату, отпускные, премии, компенсации за задержку.',
+            description: 'Взыщем зарплату, отпускные, премии, компенсации за задержку.',
         },
         {
             key: '3',
@@ -40,15 +41,15 @@ const WorkPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                title="Трудовые споры"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
-                meta="Трудовые споры"
                 illustration={WorkImage}
+                meta="Трудовые споры"
+                stageDescription="Незаконное увольнение? Не выплатили зарплату? Давят дисциплинаркой? Поможем восстановить справедливость и отстоим ваши трудовые права."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением трудовых споров"
                 stageTitle="Помогаем с решением трудовых споров"
-                stageDescription="Незаконное увольнение? Не выплатили зарплату? Давят дисциплинаркой? Поможем восстановить справедливость и отстоим ваши трудовые права."
+                stages={stages}
+                title="Трудовые споры"
             />
         </RootLayout>
     );

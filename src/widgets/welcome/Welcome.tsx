@@ -1,11 +1,13 @@
 'use client';
 import type { FC } from 'react';
+
 import { Button } from '@ui';
-import styles from './Welcome.module.css';
+import { Services } from '@widgets/services';
+import { Stats } from '@widgets/stats';
 
 import { Illustration } from './illustration';
-import { Stats } from '@widgets/stats';
-import { Services } from '@widgets/services';
+
+import styles from './Welcome.module.css';
 
 export const Welcome: FC = () => {
     return (
@@ -27,13 +29,13 @@ export const Welcome: FC = () => {
                         </p>
 
                         <div className={styles.actions}>
-                            <Button href="#application" className={styles.action}>
+                            <Button className={styles.action} href="#application">
                                 Получить консультацию
                             </Button>
                             <Button
-                                href="/payment"
-                                color="secondary"
                                 className={styles.action}
+                                color="secondary"
+                                href="/payment"
                                 variant="outline"
                             >
                                 Быстрая оплата

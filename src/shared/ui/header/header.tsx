@@ -1,10 +1,13 @@
 'use client';
 import type { FC } from 'react';
 import { useState } from 'react';
-import styles from './header.module.css';
-import { Button, Navigation } from '@ui';
-import { CrossIcon, LogoIcon, MenuIcon } from '@icons';
+
 import cn, { clsx } from 'clsx';
+
+import { CrossIcon, LogoIcon, MenuIcon } from '@icons';
+import { Button, Navigation } from '@ui';
+
+import styles from './header.module.css';
 
 type HeaderProps = {
     color?: 'default' | 'white';
@@ -31,8 +34,6 @@ export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
 
             <Button
                 className={cn({ [styles.toggle]: true, [styles.expanded]: expanded })}
-                variant="ghost"
-                onClick={toggleMenu}
                 iconRight={
                     expanded ? (
                         <CrossIcon className={styles.toggleIcon} />
@@ -40,6 +41,8 @@ export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
                         <MenuIcon className={styles.toggleIcon} />
                     )
                 }
+                variant="ghost"
+                onClick={toggleMenu}
             />
 
             <Navigation color={color} visible={expanded} onExpand={onMenuExpand} />

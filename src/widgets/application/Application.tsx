@@ -1,11 +1,15 @@
 'use client';
-import { FC } from 'react';
-import styles from './Application.module.css';
-import { Button, Checkbox, Input, PhoneInput, Textarea } from '@ui';
+import type { FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { RequestFields } from './request.schema';
-import { requestResolver } from '@widgets/application/request.schema';
+
 import cn from 'clsx';
+
+import { Button, Checkbox, Input, PhoneInput, Textarea } from '@ui';
+
+import type { RequestFields } from './request.schema';
+import { requestResolver } from './request.schema';
+
+import styles from './Application.module.css';
 
 export const Application: FC = () => {
     const methods = useForm<RequestFields>({
@@ -25,7 +29,7 @@ export const Application: FC = () => {
     };
 
     return (
-        <section id="application" className={styles.application}>
+        <section className={styles.application} id="application">
             <h2 className={styles.header}>
                 Расскажите, что случилось —<br className={styles.break} />
                 поможем разобраться!
@@ -35,26 +39,30 @@ export const Application: FC = () => {
             </p>
 
             <FormProvider {...methods}>
-                <form id="communication-form" className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+                <form
+                    className={styles.form}
+                    id="communication-form"
+                    onSubmit={handleSubmit(onSubmit)}
+                >
                     <Input
-                        className={cn(styles.control, styles.name)}
                         required
+                        className={cn(styles.control, styles.name)}
                         label="Имя"
-                        placeholder="Как к вам обращаться?"
                         name="name"
+                        placeholder="Как к вам обращаться?"
                     />
                     <PhoneInput
-                        className={cn(styles.control, styles.phone)}
                         required
+                        className={cn(styles.control, styles.phone)}
                         label="Телефон"
-                        placeholder="Ваш номер телефона"
                         name="phone"
+                        placeholder="Ваш номер телефона"
                     />
                     <Textarea
                         className={cn(styles.control, styles.message)}
                         label="Опишите ситуацию"
-                        placeholder="Опишите ситуацию"
                         name="message"
+                        placeholder="Опишите ситуацию"
                     />
                     <Checkbox
                         className={cn(styles.control, styles.agreement)}
@@ -62,7 +70,11 @@ export const Application: FC = () => {
                         name="agreement"
                     />
 
-                    <Button form="communication-form" className={styles.action} type="submit">
+                    <Button
+                        className={styles.action}
+                        form="communication-form"
+                        type="submit"
+                    >
                         Задать вопрос
                     </Button>
                 </form>

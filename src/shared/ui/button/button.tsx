@@ -1,8 +1,10 @@
-"use client";
+'use client';
 import type { FC, PropsWithChildren, ReactNode } from 'react';
+
 import cn from 'clsx';
-import styles from './button.module.css';
 import Link from 'next/link';
+
+import styles from './button.module.css';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonVariant = 'default' | 'outline' | 'ghost';
@@ -50,7 +52,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 
     if (href) {
         return (
-            <Link aria-disabled={disabled} href={href} className={classes}>
+            <Link aria-disabled={disabled} className={classes} href={href}>
                 {iconLeft}
                 {children}
                 {iconRight}
@@ -60,10 +62,10 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
 
     return (
         <button
-            type={type}
-            form={form}
-            disabled={disabled}
             className={classes}
+            disabled={disabled}
+            form={form}
+            type={type}
             onClick={onClick}
             {...rest}
         >

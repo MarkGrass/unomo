@@ -1,6 +1,8 @@
-import { FC } from 'react';
-import DarkLayout from '../app/dark-layout';
+import type { FC } from 'react';
+
 import { Success } from '@widgets/success';
+
+import DarkLayout from '../app/dark-layout';
 
 const SuccessPage: FC = () => {
     return (

@@ -1,5 +1,7 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+
 import { Payment } from '@widgets/payment';
+
 import LightLayout from '../app/light-layout';
 
 const PaymentPage: FC = () => {

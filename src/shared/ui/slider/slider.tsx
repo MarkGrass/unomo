@@ -1,9 +1,10 @@
 'use client';
-import { FC, useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+import type { FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 import cn from 'clsx';
-import styles from './slider.module.css';
-import { LeftIcon, RightIcon } from '@icons';
+import Image from 'next/image';
+
 import {
     AdvisorImage,
     AssistantImage,
@@ -12,6 +13,9 @@ import {
     LeadAdvisorImage,
 } from '@assets';
 import { useResize } from '@hooks';
+import { LeftIcon, RightIcon } from '@icons';
+
+import styles from './slider.module.css';
 
 type SliderProps = {
     title?: string;
@@ -80,6 +84,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
             if (prev === 0) {
                 return prev;
             }
+
             return prev - 1;
         });
     };
@@ -90,6 +95,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
             if (prev === slides.length - 1) {
                 return prev;
             }
+
             return prev + 1;
         });
     };
@@ -122,17 +128,17 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
 
                 <div className={styles.controls}>
                     <div
-                        role="button"
-                        color="secondary"
                         className={styles.prev}
+                        color="secondary"
+                        role="button"
                         onClick={handlePrev}
                     >
                         <LeftIcon />
                     </div>
                     <div
-                        role="button"
-                        color="secondary"
                         className={styles.next}
+                        color="secondary"
+                        role="button"
                         onClick={handleNext}
                     >
                         <RightIcon />
@@ -143,19 +149,19 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
             <div className={styles.wrapper}>
                 {slides.map((slide, index) => (
                     <figure
+                        className={styles.slide}
+                        key={slide.key}
                         ref={(c) => {
                             if (c) {
                                 slidesRef.current[index] = c;
                             }
                         }}
-                        className={styles.slide}
-                        key={slide.key}
                     >
                         <Image
-                            src={slide.image}
                             alt={`${slide.name}, ${slide.position}`}
-                            width={435}
                             height={500}
+                            src={slide.image}
+                            width={435}
                         />
                         <figcaption className={styles.info}>
                             <p className={styles.name}>{slide.name}</p>
@@ -170,13 +176,13 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
             <footer className={styles.pointer}>
                 {slides.map(({ key, position }, index) => (
                     <div
-                        key={key}
-                        role="button"
                         aria-label={position}
                         className={cn({
                             [styles.point]: true,
                             [styles.active]: activeSlide === index,
                         })}
+                        key={key}
+                        role="button"
                         onClick={() => handleClick(index)}
                     ></div>
                 ))}

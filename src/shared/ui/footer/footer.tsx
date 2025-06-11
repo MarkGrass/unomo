@@ -1,9 +1,12 @@
-import { FC } from 'react';
-import Link from 'next/link';
+import type { FC } from 'react';
+
 import cn from 'clsx';
-import styles from './footer.module.css';
+import Link from 'next/link';
+
 import { LogoIcon, TelegramIcon, WhatsappIcon } from '@icons';
 import { Button } from '@ui';
+
+import styles from './footer.module.css';
 
 type FooterProps = {
     className?: string;
@@ -20,9 +23,7 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
             <article className={styles.info}>
                 <LogoIcon className={styles.logo} />
 
-                <h3 className={styles.title}>
-                    Оказание юридической помощи
-                </h3>
+                <h3 className={styles.title}>Оказание юридической помощи</h3>
                 <p className={styles.description}>
                     Дадим чёткий план действий и начнём помогать уже с первой консультации
                     - без лишних затрат и потери времени!
@@ -70,15 +71,15 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
                     <Button
                         className={styles.messenger}
                         href="https://wa.me/+79684611436"
-                        variant="ghost"
                         iconLeft={<WhatsappIcon className={styles.icon} />}
+                        variant="ghost"
                     />
 
                     <Button
                         className={styles.messenger}
-                        href="https://t.me"
-                        variant="ghost"
+                        href="https://t.me/+79684611436"
                         iconLeft={<TelegramIcon className={styles.icon} />}
+                        variant="ghost"
                     />
                 </div>
             </div>
@@ -87,10 +88,7 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
                 <p className={styles.organization}>ИП Глазырин Егор Владимирович</p>
                 <p className={styles.code}>ОГРНИП323508100514648 ИНН741307647394</p>
 
-                <Link
-                    href="/policy"
-                    className={styles.policy}
-                >
+                <Link className={styles.policy} href="/policy">
                     Политика конфиденциальности
                 </Link>
             </aside>

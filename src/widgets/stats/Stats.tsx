@@ -1,6 +1,8 @@
-import { FC } from 'react';
-import { Card } from '@ui';
+import type { FC } from 'react';
+
 import { CityIcon, DateIcon, GroupIcon, ReviewIcon } from '@icons';
+import { Card } from '@ui';
+
 import styles from './Stats.module.css';
 
 export const Stats: FC = () => {
@@ -30,11 +32,12 @@ export const Stats: FC = () => {
             icon: <DateIcon />,
         },
     ];
+
     return (
         <section className={styles.stats}>
             {stats.map((item) => (
-                <Card className={styles.item} as="figure" key={item.key} color="white">
-                    <div className={styles.icon} role="img" aria-label={item.description}>
+                <Card as="figure" className={styles.item} color="white" key={item.key}>
+                    <div aria-label={item.description} className={styles.icon} role="img">
                         {item.icon}
                     </div>
                     <h3 className={styles.title}>{item.title}</h3>

@@ -1,8 +1,13 @@
 'use client';
-import { FC, useEffect, useRef, useState } from 'react';
-import { Button, Card, CardColor, Stars } from '@ui';
-import styles from './Review.module.css';
+import type { FC } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 import cn from 'clsx';
+
+import type { CardColor } from '@ui';
+import { Button, Card, Stars } from '@ui';
+
+import styles from './Review.module.css';
 
 export const Review: FC = () => {
     const cards = [
@@ -85,23 +90,23 @@ export const Review: FC = () => {
     }, [activeSlide, isInteraction]);
 
     return (
-        <section id="reviews" className={styles.review}>
+        <section className={styles.review} id="reviews">
             <h2 className={styles.head}>Каждый отзыв — это история решённого вопроса</h2>
 
             <div className={styles.wrapper}>
                 {cards.map((card, index) => (
                     <div
+                        className={styles.item}
+                        key={card.key}
                         ref={(c) => {
                             if (c) {
                                 slidesRef.current[index] = c;
                             }
                         }}
-                        className={styles.item}
-                        key={card.key}
                     >
                         <Card
-                            className={styles.card}
                             as="figure"
+                            className={styles.card}
                             color={card.color as CardColor}
                         >
                             <cite className={styles.message}>{card.message}</cite>
@@ -119,19 +124,21 @@ export const Review: FC = () => {
                 <div className={styles.pointer}>
                     {cards.map(({ key, author }, index) => (
                         <div
-                            key={key}
-                            role="button"
                             aria-label={author}
                             className={cn({
                                 [styles.point]: true,
                                 [styles.active]: activeSlide === index,
                             })}
+                            key={key}
+                            role="button"
                             onClick={() => handleClick(index)}
                         ></div>
                     ))}
                 </div>
 
-                <Button href="#application" className={styles.action}>Получить консультацию</Button>
+                <Button className={styles.action} href="#application">
+                    Получить консультацию
+                </Button>
             </footer>
         </section>
     );

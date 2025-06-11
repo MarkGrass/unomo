@@ -1,11 +1,16 @@
-import { FC } from 'react';
-import Image from 'next/image';
+import type { FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import { PaymentFields, paymentResolver } from './payment.schema';
-import styles from './Payment.module.css';
-import { Button, Input, PhoneInput } from '@ui';
+
 import cn from 'clsx';
+import Image from 'next/image';
+
 import { PaymentImage } from '@assets';
+import { Button, Input, PhoneInput } from '@ui';
+
+import type { PaymentFields } from './payment.schema';
+import { paymentResolver } from './payment.schema';
+
+import styles from './Payment.module.css';
 
 export const Payment: FC = () => {
     const methods = useForm<PaymentFields>({
@@ -29,54 +34,54 @@ export const Payment: FC = () => {
         <section className={styles.payment}>
             <FormProvider {...methods}>
                 <form
-                    id="payment-form"
                     className={styles.form}
+                    id="payment-form"
                     onSubmit={handleSubmit(onSubmit)}
                 >
                     <Input
-                        className={cn(styles.control, styles.name)}
                         required
+                        className={cn(styles.control, styles.name)}
                         label="Фамилия"
-                        placeholder="Фамилия"
                         name="firstname"
+                        placeholder="Фамилия"
                     />
                     <Input
-                        className={cn(styles.control, styles.name)}
                         required
+                        className={cn(styles.control, styles.name)}
                         label="Имя"
-                        placeholder="Имя"
                         name="lastname"
+                        placeholder="Имя"
                     />
                     <Input
-                        className={cn(styles.control, styles.name)}
                         required
+                        className={cn(styles.control, styles.name)}
                         label="Отчество"
-                        placeholder="Отчество"
                         name="patronymic"
+                        placeholder="Отчество"
                     />
                     <Input
                         className={cn(styles.control, styles.name)}
                         label="Номер договора"
-                        placeholder="Номер договора"
                         name="contract"
+                        placeholder="Номер договора"
                     />
                     <PhoneInput
-                        className={cn(styles.control, styles.phone)}
                         required
+                        className={cn(styles.control, styles.phone)}
                         label="Телефон"
-                        placeholder="Телефон"
                         name="phone"
+                        placeholder="Телефон"
                     />
                     <Input
-                        className={cn(styles.control, styles.phone)}
                         required
-                        type="number"
+                        className={cn(styles.control, styles.phone)}
                         label="Сумма в рублях"
-                        placeholder="Сумма в рублях"
                         name="amount"
+                        placeholder="Сумма в рублях"
+                        type="number"
                     />
 
-                    <Button form="payment-form" className={styles.action} type="submit">
+                    <Button className={styles.action} form="payment-form" type="submit">
                         Оплатить
                     </Button>
                 </form>
@@ -138,8 +143,8 @@ export const Payment: FC = () => {
                 </p>
 
                 <Image
-                    className={styles.qrcode}
                     alt="Payment QR Code"
+                    className={styles.qrcode}
                     src={PaymentImage}
                 />
             </details>

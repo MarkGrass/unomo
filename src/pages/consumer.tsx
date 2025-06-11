@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { ConsumerImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const ConsumerPage: FC = () => {
     const stages = [
@@ -32,8 +34,7 @@ const ConsumerPage: FC = () => {
         {
             key: '5',
             title: 'Навязывание услуг, страховок и доп. опций',
-            description:
-                'Добьёмся отказа от лишнего, вернём деньги за ненужные услуги.',
+            description: 'Добьёмся отказа от лишнего, вернём деньги за ненужные услуги.',
         },
         {
             key: '6',
@@ -46,15 +47,15 @@ const ConsumerPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                meta="Права потребителей"
-                title="Права потребителей"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
                 illustration={ConsumerImage}
+                meta="Права потребителей"
+                stageDescription="Вернём деньги за товар или услугу, защитим ваши права. Помогаем в спорах с магазинами, сервисами, исполнителями. Подготовим претензию, вернём деньги, взыщем компенсацию."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем защитить права потребителей"
                 stageTitle="Помогаем защитить права потребителей"
-                stageDescription="Вернём деньги за товар или услугу, защитим ваши права. Помогаем в спорах с магазинами, сервисами, исполнителями. Подготовим претензию, вернём деньги, взыщем компенсацию."
+                stages={stages}
+                title="Права потребителей"
             />
         </RootLayout>
     );

@@ -9,7 +9,7 @@
     background: rgb(var(--color-white-alpha) / 0.1);
     backdrop-filter: blur(48px);
     position: absolute;
-    z-index: var(--level-up);
+    z-index: var(--level-header);
     right: 0;
     left: 0;
     top: 0;

@@ -1,8 +1,12 @@
-import { FC, ReactNode } from 'react';
-import { Button, Card } from '@ui';
-import styles from './Stages.module.css';
+import type { FC, ReactNode } from 'react';
+
 import cn from 'clsx';
-import Image, { StaticImageData } from 'next/image';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+
+import { Button, Card } from '@ui';
+
+import styles from './Stages.module.css';
 
 export type StageItem = {
     key: string;
@@ -30,7 +34,7 @@ export const Stages: FC<StagesProps> = ({
     counter = false,
 }) => {
     return (
-        <section id={id} className={styles.stages}>
+        <section className={styles.stages} id={id}>
             <h2 className={styles.head}>{title}</h2>
 
             {description && <p className={styles.message}>{description}</p>}
@@ -50,14 +54,14 @@ export const Stages: FC<StagesProps> = ({
                         <Card
                             bordered
                             as="li"
-                            color="white"
-                            variant="flat"
-                            key={stage.key}
                             className={cn({
                                 [styles.stage]: true,
                                 [styles.count]: counter,
                             })}
+                            color="white"
                             data-count={index + 1}
+                            key={stage.key}
+                            variant="flat"
                         >
                             <div className={styles.info}>
                                 <p className={styles.title}>{stage.title}</p>

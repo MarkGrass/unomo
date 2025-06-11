@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { AutoImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const AutoPage: FC = () => {
     const stages = [
@@ -46,16 +48,16 @@ const AutoPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                title="Автомобильные и административные споры"
                 description="Дадим чёткий план действий и начнём помогать уже с первой
                             консультации - без лишних затрат и потери времени!"
-                meta="Автомобильные и административные споры"
                 illustration={AutoImage}
+                meta="Автомобильные и административные споры"
+                stageDescription="Защищаем в спорах после ДТП, с ГИБДД, автосалонами и страховыми. Поможем взыскать ущерб, оспорить вину, вернуть права или отменить незаконные действия ГИБДД."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением административных споров"
                 stageTitle="Помогаем с решением административных споров"
-                stageDescription="Защищаем в спорах после ДТП, с ГИБДД, автосалонами и страховыми. Поможем взыскать ущерб, оспорить вину, вернуть права или отменить незаконные действия ГИБДД."
+                stages={stages}
+                title="Автомобильные и административные споры"
             />
         </RootLayout>
     );

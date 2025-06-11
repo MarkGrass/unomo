@@ -1,8 +1,11 @@
-import { FC } from 'react';
-import { Button, Card } from '@ui';
-import styles from './Services.module.css';
-import { ForwardIcon } from '@icons';
+import type { FC } from 'react';
+
 import cn from 'clsx';
+
+import { ForwardIcon } from '@icons';
+import { Button, Card } from '@ui';
+
+import styles from './Services.module.css';
 
 export const Services: FC = () => {
     const services = [
@@ -79,8 +82,9 @@ export const Services: FC = () => {
             path: '/fraud',
         },
     ];
+
     return (
-        <section id="services" className={styles.services}>
+        <section className={styles.services} id="services">
             <h2 className={styles.header}>Помогаем с решением любых правовых вопросов</h2>
             <p className={styles.description}>
                 Более 20 юристов в штате, которые помогут с любым вопросом
@@ -89,18 +93,18 @@ export const Services: FC = () => {
                 {services.map((service) => (
                     <Card
                         as="figure"
-                        key={service.key}
-                        color="white"
                         className={cn(styles.service, styles[service.key])}
+                        color="white"
+                        key={service.key}
                     >
                         <h3 className={styles.title}>{service.title}</h3>
 
                         <Button
                             className={styles.link}
-                            href={service.path}
                             color="primary"
+                            href={service.path}
+                            iconRight={<ForwardIcon height={24} width={24} />}
                             variant="outline"
-                            iconRight={<ForwardIcon width={24} height={24} />}
                         >
                             Подробнее
                         </Button>

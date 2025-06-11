@@ -2,10 +2,10 @@ import type { FC, SVGProps } from 'react';
 
 export const MarkIcon: FC<SVGProps<SVGSVGElement>> = (props) => (
     <svg
-        width={56}
+        fill="none"
         height={57}
         viewBox="0 0 56 57"
-        fill="none"
+        width={56}
         xmlns="http://www.w3.org/2000/svg"
         {...props}
     >

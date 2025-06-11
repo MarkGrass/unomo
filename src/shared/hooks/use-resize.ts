@@ -9,7 +9,7 @@ export const useResize = () => {
         setIsMobile(window.innerWidth < 768);
         setIsTablet(window.innerWidth < 1200);
         setIsDesktop(window.innerWidth >= 1200);
-    }
+    };
 
     useEffect(() => {
         handleResize();
@@ -17,7 +17,7 @@ export const useResize = () => {
 
         return () => {
             document.removeEventListener('resize', handleResize);
-        }
+        };
     }, []);
 
     return {
@@ -25,4 +25,4 @@ export const useResize = () => {
         isTablet,
         isDesktop,
     };
-}
+};

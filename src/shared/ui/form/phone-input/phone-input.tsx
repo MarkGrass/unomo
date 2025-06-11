@@ -1,8 +1,10 @@
 'use client';
-import { FC } from 'react';
-import { withMask } from 'use-mask-input';
-import cn from 'clsx';
+import type { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
+
+import cn from 'clsx';
+import { withMask } from 'use-mask-input';
+
 import styles from './phone-input.module.css';
 
 type PhoneInputProps = {
@@ -47,9 +49,9 @@ export const PhoneInput: FC<PhoneInputProps> = ({
                         )}
 
                         <input
-                            id={name}
                             className={styles.input}
                             disabled={disabled}
+                            id={name}
                             placeholder={placeholder}
                             ref={withMask(mask || 'numeric') as never}
                             type="text"

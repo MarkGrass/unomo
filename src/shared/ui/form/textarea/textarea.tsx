@@ -1,7 +1,9 @@
 'use client';
-import { FC } from 'react';
-import cn from 'clsx';
+import type { FC } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
+
+import cn from 'clsx';
+
 import styles from './textarea.module.css';
 
 type TextareaProps = {
@@ -46,9 +48,9 @@ export const Textarea: FC<TextareaProps> = ({
                         )}
 
                         <textarea
-                            id={name}
                             className={styles.input}
                             disabled={disabled}
+                            id={name}
                             placeholder={placeholder}
                             rows={rows}
                             value={value}

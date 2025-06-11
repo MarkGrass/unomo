@@ -1,17 +1,20 @@
-import { FC } from 'react';
-import styles from './Success.module.css';
+import type { FC } from 'react';
+
 import Image from 'next/image';
+
 import { SuccessImage } from '@assets';
 import { Button } from '@ui';
+
+import styles from './Success.module.css';
 
 export const Success: FC = () => {
     return (
         <section className={styles.success}>
             <div className={styles.wrapper}>
                 <Image
+                    alt="Оплата прошла успешно"
                     className={styles.illustration}
                     src={SuccessImage}
-                    alt="Оплата прошла успешно"
                 />
 
                 <h1 className={styles.head}>

@@ -4,8 +4,9 @@ import { Controller, useFormContext } from 'react-hook-form';
 
 import cn from 'clsx';
 
-import styles from './checkbox.module.css';
 import { CheckIcon } from '@icons';
+
+import styles from './checkbox.module.css';
 
 type CheckboxProps = {
     name: string;
@@ -29,12 +30,13 @@ export const Checkbox: FC<CheckboxProps> = ({ name, label, className = '' }) => 
                     [styles.error]: Boolean(error),
                     [className]: Boolean(className),
                 });
+
                 return (
                     <label className={classes} htmlFor={name}>
                         <input
-                            id={name}
                             checked={Boolean(value)}
                             className={styles.input}
+                            id={name}
                             ref={ref}
                             type="checkbox"
                             onBlur={onBlur}
@@ -44,11 +46,9 @@ export const Checkbox: FC<CheckboxProps> = ({ name, label, className = '' }) => 
                             }}
                         />
                         <div className={styles.pointer} tabIndex={0}>
-                            <CheckIcon width={16} height={16} />
+                            <CheckIcon height={16} width={16} />
                         </div>
-                        <span className={styles.label}>
-                            {label}
-                        </span>
+                        <span className={styles.label}>{label}</span>
                     </label>
                 );
             }}

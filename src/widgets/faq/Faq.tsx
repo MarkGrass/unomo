@@ -1,6 +1,8 @@
-import { FC } from 'react';
-import styles from './Faq.module.css';
+import type { FC } from 'react';
+
 import { Accordion } from '@ui';
+
+import styles from './Faq.module.css';
 
 export const Faq: FC = () => {
     const questions = [
@@ -43,7 +45,7 @@ export const Faq: FC = () => {
     ];
 
     return (
-        <section id="faq" className={styles.faq}>
+        <section className={styles.faq} id="faq">
             <h2 className={styles.head}>Частые вопросы</h2>
             <Accordion items={questions} />
         </section>

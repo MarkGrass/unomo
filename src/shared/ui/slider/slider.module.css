@@ -13,7 +13,7 @@
 }
 
 .wrapper {
-    overflow: auto;
+    overflow: auto hidden;
     display: flex;
     align-items: stretch;
     justify-content: flex-start;

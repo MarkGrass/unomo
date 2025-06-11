@@ -1,9 +1,13 @@
 'use client';
-import { FC } from 'react';
-import { MarkIcon } from '@icons';
-import Image, { StaticImageData } from 'next/image';
-import { useResize } from '@hooks';
+import type { FC } from 'react';
+
 import cn from 'clsx';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+
+import { useResize } from '@hooks';
+import { MarkIcon } from '@icons';
+
 import styles from './illustration.module.css';
 
 type IllustrationProps = {
@@ -15,15 +19,15 @@ export const Illustration: FC<IllustrationProps> = ({ src, meta = '' }) => {
     const { isMobile } = useResize();
 
     return (
-        <div className={styles.illustration} role="img" aria-label={meta}>
+        <div aria-label={meta} className={styles.illustration} role="img">
             <MarkIcon className={styles.marker} />
 
             <Image
                 priority
-                src={src}
                 alt=""
-                width={isMobile ? 375 : 648}
                 height={isMobile ? 330 : 570}
+                src={src}
+                width={isMobile ? 375 : 648}
             />
 
             <div className={cn(styles.stats, styles.clients)}>

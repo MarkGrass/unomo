@@ -1,27 +1,26 @@
 'use client';
-import { FC } from 'react';
+import type { FC } from 'react';
+
 import Image from 'next/image';
-import { Slider } from '@ui';
-import styles from './About.module.css';
-import {
-    FounderMobileImage,
-    FounderDesktopImage,
-    SignImage,
-} from '@assets';
+
+import { FounderMobileImage, FounderDesktopImage, SignImage } from '@assets';
 import { useResize } from '@hooks';
+import { Slider } from '@ui';
+
+import styles from './About.module.css';
 
 export const About: FC = () => {
     const { isMobile } = useResize();
 
     return (
-        <section id="about" className={styles.about}>
+        <section className={styles.about} id="about">
             <article className={styles.founder}>
                 <h2 className={styles.head}>Правовая поддержка на все случаи жизни</h2>
 
                 <figure
+                    aria-label="Глазырин Егор Владимирович, Основатель"
                     className={styles.photo}
                     role="img"
-                    aria-label="Глазырин Егор Владимирович, Основатель"
                 >
                     <Image
                         alt=""
@@ -50,17 +49,17 @@ export const About: FC = () => {
                     <p>
                         С уважением к Вам!
                         <Image
-                            className={styles.sign}
                             alt="Подпись основателя"
+                            className={styles.sign}
+                            height={133}
                             src={SignImage}
                             width={160}
-                            height={133}
                         />
                     </p>
                 </blockquote>
             </article>
 
-            <Slider title="В штате более 20 юристов" className={styles.employees} />
+            <Slider className={styles.employees} title="В штате более 20 юристов" />
         </section>
     );
 };

@@ -1,5 +1,7 @@
-import { FC, type JSX, PropsWithChildren, ReactNode } from 'react';
+import type { FC, PropsWithChildren, ReactNode, type JSX } from 'react';
+
 import cn from 'clsx';
+
 import styles from './card.module.css';
 
 export type CardColor = 'primary' | 'secondary' | 'white' | 'transparent';
@@ -36,5 +38,9 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
     });
     const Tag = `${as}` as keyof JSX.IntrinsicElements;
 
-    return <Tag className={classes} {...rest}>{children}</Tag>;
+    return (
+        <Tag className={classes} {...rest}>
+            {children}
+        </Tag>
+    );
 };

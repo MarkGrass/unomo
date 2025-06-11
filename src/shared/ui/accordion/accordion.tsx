@@ -1,8 +1,12 @@
 'use client';
-import { FC, MouseEvent, useState } from 'react';
+import type { FC, MouseEvent } from 'react';
+import { useState } from 'react';
+
 import cn from 'clsx';
-import styles from './accordion.module.css';
+
 import { MinusIcon, PlusIcon } from '@icons';
+
+import styles from './accordion.module.css';
 
 export type AccordionItemProps = {
     key: string;
@@ -31,9 +35,9 @@ export const Accordion: FC<AccordionProps> = ({ items = [], className = '' }) =>
         >
             {items.map((item, index) => (
                 <details
-                    open={activeItemIndex === index}
                     className={styles.item}
                     key={item.key}
+                    open={activeItemIndex === index}
                     onClick={(event) => handleClick(event, index)}
                 >
                     <summary>

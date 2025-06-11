@@ -1,9 +1,14 @@
-import { FC } from 'react';
-import { Illustration } from './illustration';
+import type { FC } from 'react';
+
+import type { StaticImageData } from 'next/image';
+
 import { Button } from '@ui';
+import type { StageItem } from '@widgets/stages';
+import { Stages } from '@widgets/stages';
 import { Stats } from '@widgets/stats';
-import { StageItem, Stages } from '@widgets/stages';
-import { StaticImageData } from 'next/image';
+
+import { Illustration } from './illustration';
+
 import styles from './Service.module.css';
 
 type ServiceProps = {
@@ -40,13 +45,13 @@ export const Service: FC<ServiceProps> = ({
                         <p className={styles.description}>{description}</p>
 
                         <div className={styles.actions}>
-                            <Button href="#application" className={styles.action}>
+                            <Button className={styles.action} href="#application">
                                 Получить консультацию
                             </Button>
                             <Button
-                                href="/payment"
                                 className={styles.action}
                                 color="secondary"
+                                href="/payment"
                                 variant="outline"
                             >
                                 Быстрая оплата
@@ -59,12 +64,12 @@ export const Service: FC<ServiceProps> = ({
             <Stats />
 
             <Stages
-                id="services"
-                title={stageTitle}
                 description={stageDescription}
-                meta={stageMeta}
+                id="services"
                 image={stageImg}
+                meta={stageMeta}
                 stages={stages}
+                title={stageTitle}
             />
         </>
     );

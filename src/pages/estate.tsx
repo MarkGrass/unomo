@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { EstateImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const EstatePage: FC = () => {
     const stages = [
@@ -46,15 +48,15 @@ const EstatePage: FC = () => {
     return (
         <RootLayout>
             <Service
-                title="Недвижимость и жилье"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
-                meta="Недвижимость и жилье"
                 illustration={EstateImage}
+                meta="Недвижимость и жилье"
+                stageDescription="Сопровождаем сделки, решаем споры с застройщиком и соседями, оформляем право собственности, представляем в суде."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем в спорах и сделках с недвижимостью"
                 stageTitle="Помогаем в спорах и сделках с недвижимостью"
-                stageDescription="Сопровождаем сделки, решаем споры с застройщиком и соседями, оформляем право собственности, представляем в суде."
+                stages={stages}
+                title="Недвижимость и жилье"
             />
         </RootLayout>
     );

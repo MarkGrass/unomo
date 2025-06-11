@@ -1,5 +1,7 @@
-import { FC } from 'react';
+import type { FC } from 'react';
+
 import { Confirm } from '@widgets/confirm';
+
 import DarkLayout from '../app/dark-layout';
 
 const ConfirmPage: FC = () => {

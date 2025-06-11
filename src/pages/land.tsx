@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { LandImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const LandPage: FC = () => {
     const stages = [
@@ -40,15 +42,15 @@ const LandPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                meta="Земельные споры"
-                title="Земельные споры"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
                 illustration={LandImage}
+                meta="Земельные споры"
+                stageDescription="Работаем с ИЖС, СНТ, ЛПХ, сельхоз- и коммерческой землёй. Ведём дела в суде, оформляем права, защищаем от посягательств."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением земельных споров"
                 stageTitle="Помогаем с решением земельных споров"
-                stageDescription="Работаем с ИЖС, СНТ, ЛПХ, сельхоз- и коммерческой землёй. Ведём дела в суде, оформляем права, защищаем от посягательств."
+                stages={stages}
+                title="Земельные споры"
             />
         </RootLayout>
     );

@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
-import { Service } from '@widgets/service';
+import type { FC } from 'react';
+
 import { InsuranceImage, LegalImage } from '@assets';
+import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const InsurancePage: FC = () => {
     const stages = [
@@ -35,15 +37,15 @@ const InsurancePage: FC = () => {
     return (
         <RootLayout>
             <Service
-                meta="Страховые споры"
-                title="Страховые споры"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
                 illustration={InsuranceImage}
+                meta="Страховые споры"
+                stageDescription="Заставим страховую выплатить всё по закону — быстро и без лишней волокиты."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением страховых споров"
                 stageTitle="Помогаем с решением страховых споров"
-                stageDescription="Заставим страховую выплатить всё по закону — быстро и без лишней волокиты."
+                stages={stages}
+                title="Страховые споры"
             />
         </RootLayout>
     );

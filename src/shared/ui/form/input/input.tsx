@@ -1,12 +1,10 @@
 'use client';
-import { FC } from 'react';
+import type { FC } from 'react';
+import type { ControllerFieldState, ControllerRenderProps } from 'react-hook-form';
+import { Controller, useFormContext } from 'react-hook-form';
+
 import cn from 'clsx';
-import {
-    Controller,
-    ControllerFieldState,
-    ControllerRenderProps,
-    useFormContext,
-} from 'react-hook-form';
+
 import styles from './input.module.css';
 
 type InputType = 'text' | 'number';
@@ -58,13 +56,13 @@ export const Input: FC<InputProps> = ({
                             </label>
                         )}
                         <input
-                            id={name}
                             className={styles.input}
-                            type={type}
                             disabled={disabled}
+                            id={name}
                             placeholder={placeholder}
-                            value={value}
                             ref={ref}
+                            type={type}
+                            value={value}
                             onChange={(e) => {
                                 clearErrors(name);
                                 onChange(e);

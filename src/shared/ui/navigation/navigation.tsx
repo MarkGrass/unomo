@@ -1,9 +1,12 @@
-import { FC } from 'react';
-import { Button } from '@ui';
-import { PhoneIcon } from '@icons';
-import styles from './navigation.module.css';
-import Link from 'next/link';
+import type { FC } from 'react';
+
 import { clsx } from 'clsx';
+import Link from 'next/link';
+
+import { PhoneIcon } from '@icons';
+import { Button } from '@ui';
+
+import styles from './navigation.module.css';
 
 type NavigationProps = {
     visible: boolean;
@@ -48,11 +51,11 @@ export const Navigation: FC<NavigationProps> = ({
 
             <Button
                 className={styles.call}
-                variant="outline"
                 color="secondary"
                 href="tel:+7 968 461 14 36"
-                size="sm"
                 iconLeft={<PhoneIcon className={styles.callIcon} />}
+                size="sm"
+                variant="outline"
             >
                 +7 968 461 14 36
             </Button>

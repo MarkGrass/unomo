@@ -1,7 +1,9 @@
-import { FC } from 'react';
-import RootLayout from '../app/root-layout';
+import type { FC } from 'react';
+
 import { LegalImage, TaxesImage } from '@assets';
 import { Service } from '@widgets/service';
+
+import RootLayout from '../app/root-layout';
 
 const TaxesPage: FC = () => {
     const stages = [
@@ -34,15 +36,15 @@ const TaxesPage: FC = () => {
     return (
         <RootLayout>
             <Service
-                title="Налоги и отчетность"
                 description="Дадим чёткий план действий и начнём помогать уже с первой консультации - без лишних затрат и потери времени!"
-                meta="Налоги и отчетность"
                 illustration={TaxesImage}
+                meta="Налоги и отчетность"
+                stageDescription="Решаем налоговые споры, сопровождаем проверки, возвращаем налоги и помогаем с отчётностью."
                 stageImg={LegalImage}
-                stages={stages}
                 stageMeta="Помогаем с решением налоговых споров"
                 stageTitle="Помогаем с решением налоговых споров"
-                stageDescription="Решаем налоговые споры, сопровождаем проверки, возвращаем налоги и помогаем с отчётностью."
+                stages={stages}
+                title="Налоги и отчетность"
             />
         </RootLayout>
     );

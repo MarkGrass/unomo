@@ -23,6 +23,7 @@
     --level-down: -1;
     --level-normal: 0;
     --level-up: 1;
+    --level-header: 100;
     --level-over: 9999;
 
     /* Text ============================ */
