@@ -41,9 +41,9 @@ export const Navigation: FC<NavigationProps> = ({
                 <Link className={styles.link} href="#faq">
                     Частые вопросы
                 </Link>
-                <Link className={styles.link} href="#contacts">
-                    Контакты
-                </Link>
+                {/*<Link className={styles.link} href="#contacts">*/}
+                {/*    Контакты*/}
+                {/*</Link>*/}
             </nav>
 
             <Button
