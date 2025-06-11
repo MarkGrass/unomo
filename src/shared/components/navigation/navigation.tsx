@@ -3,8 +3,10 @@ import type { FC } from 'react';
 import { clsx } from 'clsx';
 import Link from 'next/link';
 
+import { ROUTES } from '@const/routes';
 import { PhoneIcon } from '@icons';
-import { Button } from '@ui';
+
+import { Button } from '../button';
 
 import styles from './navigation.module.css';
 
@@ -26,22 +28,22 @@ export const Navigation: FC<NavigationProps> = ({
             })}
         >
             <nav className={styles.links}>
-                <Link className={styles.link} href="/">
+                <Link className={styles.link} href={ROUTES.ROOT}>
                     Главная
                 </Link>
-                <Link className={styles.link} href="#services">
+                <Link className={styles.link} href={ROUTES.SERVICES}>
                     Услуги
                 </Link>
-                <Link className={styles.link} href="#about">
+                <Link className={styles.link} href={ROUTES.ABOUT}>
                     О нас
                 </Link>
-                <Link className={styles.link} href="#stages">
+                <Link className={styles.link} href={ROUTES.STAGES}>
                     Этапы
                 </Link>
-                <Link className={styles.link} href="#reviews">
+                <Link className={styles.link} href={ROUTES.REVIEWS}>
                     Отзывы
                 </Link>
-                <Link className={styles.link} href="#faq">
+                <Link className={styles.link} href={ROUTES.QUESTIONS}>
                     Частые вопросы
                 </Link>
                 {/*<Link className={styles.link} href="#contacts">*/}

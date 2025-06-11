@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 
 import { SuccessImage } from '@assets';
+import { ROUTES } from '@const/routes';
 import { Button } from '@ui';
 
 import styles from './Success.module.css';
@@ -29,7 +30,7 @@ export const Success: FC = () => {
                     срочный, вы можете связаться с нами напрямую по телефону.
                 </p>
 
-                <Button className={styles.action} href="/">
+                <Button className={styles.action} href={ROUTES.ROOT}>
                     Вернуться на главную
                 </Button>
             </div>

@@ -68,7 +68,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
             name: `Чернышева
             Мария Игоревна`,
             position: 'Помощник юриста',
-            exp: '2 лет',
+            exp: '2 года',
             price: '1150+',
             image: AssistantImage,
         },
@@ -131,6 +131,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
                         className={styles.prev}
                         color="secondary"
                         role="button"
+                        tabIndex={-1}
                         onClick={handlePrev}
                     >
                         <LeftIcon />
@@ -139,6 +140,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
                         className={styles.next}
                         color="secondary"
                         role="button"
+                        tabIndex={0}
                         onClick={handleNext}
                     >
                         <RightIcon />
@@ -183,6 +185,7 @@ export const Slider: FC<SliderProps> = ({ title = '', className = '' }) => {
                         })}
                         key={key}
                         role="button"
+                        tabIndex={0}
                         onClick={() => handleClick(index)}
                     ></div>
                 ))}

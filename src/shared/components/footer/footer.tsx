@@ -3,8 +3,10 @@ import type { FC } from 'react';
 import cn from 'clsx';
 import Link from 'next/link';
 
+import { ROUTES } from '@const/routes';
 import { LogoIcon, TelegramIcon, WhatsappIcon } from '@icons';
-import { Button } from '@ui';
+
+import { Button } from '../button';
 
 import styles from './footer.module.css';
 
@@ -30,33 +32,43 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
                 </p>
 
                 <div className={styles.actions}>
-                    <Button className={styles.action}>Получить консультацию</Button>
-                    <Button className={styles.action} color="secondary" variant="outline">
+                    <Button
+                        className={styles.action}
+                        href={`${ROUTES.ROOT}${ROUTES.APPLICATION}`}
+                    >
+                        Получить консультацию
+                    </Button>
+                    <Button
+                        className={styles.action}
+                        color="secondary"
+                        href={ROUTES.PAYMENT_FROM}
+                        variant="outline"
+                    >
                         Быстрая оплата
                     </Button>
                 </div>
             </article>
 
             <nav className={styles.links}>
-                <Link className={cn(styles.link, styles.root)} href="/">
+                <Link className={cn(styles.link, styles.root)} href={ROUTES.ROOT}>
                     Главная
                 </Link>
-                <Link className={cn(styles.link, styles.about)} href="#about">
+                <Link className={cn(styles.link, styles.about)} href={ROUTES.ABOUT}>
                     О нас
                 </Link>
-                <Link className={cn(styles.link, styles.services)} href="#services">
+                <Link className={cn(styles.link, styles.services)} href={ROUTES.SERVICES}>
                     Услуги
                 </Link>
-                <Link className={cn(styles.link, styles.faq)} href="#faq">
+                <Link className={cn(styles.link, styles.faq)} href={ROUTES.QUESTIONS}>
                     Частые вопросы
                 </Link>
-                <Link className={cn(styles.link, styles.app)} href="#app">
+                <Link className={cn(styles.link, styles.app)} href={ROUTES.APPLICATION}>
                     Приложение
                 </Link>
-                <Link className={cn(styles.link, styles.contacts)} href="#contacts">
-                    Контакты
-                </Link>
-                <Link className={cn(styles.link, styles.reviews)} href="#reviews">
+                {/*<Link className={cn(styles.link, styles.contacts)} href={ROUTES.CONTACTS}>*/}
+                {/*    Контакты*/}
+                {/*</Link>*/}
+                <Link className={cn(styles.link, styles.reviews)} href={ROUTES.REVIEWS}>
                     Отзывы
                 </Link>
             </nav>

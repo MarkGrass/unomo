@@ -1,4 +1,4 @@
-import type { FC, PropsWithChildren, ReactNode, type JSX } from 'react';
+import type { FC, PropsWithChildren, ReactNode, JSX } from 'react';
 
 import cn from 'clsx';
 

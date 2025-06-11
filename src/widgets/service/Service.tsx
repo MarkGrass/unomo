@@ -2,6 +2,7 @@ import type { FC } from 'react';
 
 import type { StaticImageData } from 'next/image';
 
+import { ROUTES } from '@const/routes';
 import { Button } from '@ui';
 import type { StageItem } from '@widgets/stages';
 import { Stages } from '@widgets/stages';
@@ -45,13 +46,13 @@ export const Service: FC<ServiceProps> = ({
                         <p className={styles.description}>{description}</p>
 
                         <div className={styles.actions}>
-                            <Button className={styles.action} href="#application">
+                            <Button className={styles.action} href={ROUTES.APPLICATION}>
                                 Получить консультацию
                             </Button>
                             <Button
                                 className={styles.action}
                                 color="secondary"
-                                href="/payment"
+                                href={ROUTES.PAYMENT_FROM}
                                 variant="outline"
                             >
                                 Быстрая оплата

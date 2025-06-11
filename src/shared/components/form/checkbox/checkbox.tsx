@@ -45,7 +45,7 @@ export const Checkbox: FC<CheckboxProps> = ({ name, label, className = '' }) => 
                                 clearErrors(name);
                             }}
                         />
-                        <div className={styles.pointer} tabIndex={0}>
+                        <div className={styles.pointer}>
                             <CheckIcon height={16} width={16} />
                         </div>
                         <span className={styles.label}>{label}</span>

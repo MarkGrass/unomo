@@ -4,8 +4,11 @@ import { useState } from 'react';
 
 import cn, { clsx } from 'clsx';
 
+import { ROUTES } from '@const/routes';
 import { CrossIcon, LogoIcon, MenuIcon } from '@icons';
-import { Button, Navigation } from '@ui';
+
+import { Button } from '../button';
+import { Navigation } from '../navigation';
 
 import styles from './header.module.css';
 
@@ -28,7 +31,7 @@ export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
                 [styles[color]]: true,
             })}
         >
-            <Button className={styles.logo} href="/" variant="ghost">
+            <Button className={styles.logo} href={ROUTES.ROOT} variant="ghost">
                 <LogoIcon />
             </Button>
 

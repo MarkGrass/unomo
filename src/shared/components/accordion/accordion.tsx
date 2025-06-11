@@ -38,9 +38,8 @@ export const Accordion: FC<AccordionProps> = ({ items = [], className = '' }) =>
                     className={styles.item}
                     key={item.key}
                     open={activeItemIndex === index}
-                    onClick={(event) => handleClick(event, index)}
                 >
-                    <summary>
+                    <summary onClick={(event) => handleClick(event, index)}>
                         {item.title}
                         <span className={styles.pointer}>
                             {activeItemIndex === index ? <MinusIcon /> : <PlusIcon />}

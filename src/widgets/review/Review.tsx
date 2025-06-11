@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import cn from 'clsx';
 
+import { ROUTES } from '@const/routes';
 import type { CardColor } from '@ui';
 import { Button, Card, Stars } from '@ui';
 
@@ -131,12 +132,13 @@ export const Review: FC = () => {
                             })}
                             key={key}
                             role="button"
+                            tabIndex={0}
                             onClick={() => handleClick(index)}
                         ></div>
                     ))}
                 </div>
 
-                <Button className={styles.action} href="#application">
+                <Button className={styles.action} href={ROUTES.APPLICATION}>
                     Получить консультацию
                 </Button>
             </footer>

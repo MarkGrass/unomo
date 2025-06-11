@@ -45,7 +45,7 @@ export const Faq: FC = () => {
     ];
 
     return (
-        <section className={styles.faq} id="faq">
+        <section className={styles.faq} id="questions">
             <h2 className={styles.head}>Частые вопросы</h2>
             <Accordion items={questions} />
         </section>

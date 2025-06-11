@@ -1,6 +1,7 @@
 'use client';
 import type { FC } from 'react';
 
+import { ROUTES } from '@const/routes';
 import { Button } from '@ui';
 import { Services } from '@widgets/services';
 import { Stats } from '@widgets/stats';
@@ -29,13 +30,13 @@ export const Welcome: FC = () => {
                         </p>
 
                         <div className={styles.actions}>
-                            <Button className={styles.action} href="#application">
+                            <Button className={styles.action} href={ROUTES.APPLICATION}>
                                 Получить консультацию
                             </Button>
                             <Button
                                 className={styles.action}
                                 color="secondary"
-                                href="/payment"
+                                href={ROUTES.PAYMENT_FROM}
                                 variant="outline"
                             >
                                 Быстрая оплата

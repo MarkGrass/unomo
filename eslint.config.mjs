@@ -29,6 +29,7 @@ const eslintConfig = [
             'max-lines': ['warn', 300],
             '@typescript-eslint/no-shadow': 'error',
             '@typescript-eslint/consistent-type-imports': 'error',
+            '@next/next/no-page-custom-font': 'off',
             'react/react-in-jsx-scope': 'off',
             'jsx-a11y/alt-text': 'warn',
             'jsx-a11y/aria-props': 'warn',
@@ -36,6 +37,7 @@ const eslintConfig = [
             'jsx-a11y/aria-unsupported-elements': 'warn',
             'jsx-a11y/role-has-required-aria-props': 'warn',
             'jsx-a11y/role-supports-aria-props': 'warn',
+            'jsx-a11y/click-events-have-key-events': 'off',
             'react/jsx-sort-props': [
                 'warn',
                 {

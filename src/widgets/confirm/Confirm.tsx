@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 
 import { SuccessImage } from '@assets';
+import { ROUTES } from '@const/routes';
 import { Button } from '@ui';
 
 import styles from './Confirm.module.css';
@@ -31,7 +32,7 @@ export const Confirm: FC = () => {
                     Если вопрос срочный — позвоните нам напрямую
                 </p>
 
-                <Button className={styles.action} href="/">
+                <Button className={styles.action} href={ROUTES.ROOT}>
                     Вернуться на главную
                 </Button>
             </div>
