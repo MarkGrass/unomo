@@ -1,11 +1,11 @@
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 
+import type { ServiceData } from '@data';
+import { serviceData } from '@data';
+
 import { Service } from '@widgets/service';
 
 import RootLayout from '../../app/root-layout';
-
-import type { ServiceData } from './data';
-import { serviceData } from './data';
 
 export const getServerSideProps = (async (params) => {
     const entry = params.resolvedUrl.replace('/', '');

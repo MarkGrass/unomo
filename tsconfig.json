@@ -20,6 +20,7 @@
     ],
     "paths": {
       "@shared/*": ["./src/shared/*"],
+      "@data": ["./src/data/index.ts"],
       "@widgets/*": ["./src/widgets/*"],
       "@const/*": ["./src/shared/constants/*"],
       "@styles/*": ["./src/shared/styles/*"],
