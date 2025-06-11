@@ -62,31 +62,29 @@ export default function RootLayout({
     ];
 
     return (
-        <html lang="ru">
-            <body className={cn('root', interFont.variable)}>
-                <Header />
-                <main>
-                    {children}
-                    <About />
-                    <Stages
-                        id="stages"
-                        title={
-                            <>
-                                Этапы взаимодействия с нашей
-                                <br className="break" /> юридической командой
-                            </>
-                        }
-                        meta="Этапы взаимодействия с Unomo"
-                        image={ServiceImage}
-                        counter
-                        stages={stages}
-                    />
-                    <Application />
-                    <Review />
-                    <Faq />
-                </main>
-                <Footer />
-            </body>
-        </html>
+        <div className={cn('root', interFont.variable)}>
+            <Header />
+            <main>
+                {children}
+                <About />
+                <Stages
+                    id="stages"
+                    title={
+                        <>
+                            Этапы взаимодействия с нашей
+                            <br className="break" /> юридической командой
+                        </>
+                    }
+                    meta="Этапы взаимодействия с Unomo"
+                    image={ServiceImage}
+                    counter
+                    stages={stages}
+                />
+                <Application />
+                <Review />
+                <Faq />
+            </main>
+            <Footer />
+        </div>
     );
 }
