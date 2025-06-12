@@ -72,7 +72,7 @@ export const Stages: FC<StagesProps> = ({
                 </ul>
             </div>
 
-            <Button className={styles.call} href="tel:+7 968 461 14 36">
+            <Button className={styles.call} href="tel:+7 (495) 118-22-02">
                 Получить {!counter && 'бесплатную'} консультацию
             </Button>
         </section>

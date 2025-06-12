@@ -123,6 +123,24 @@
 .outline.secondary[disabled] {
     color: var(--color-grey-100);
 }
+.outline.secondary.sm.inverse {
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+.outline.secondary.sm.inverse:hover,
+.outline.secondary.sm.inverse:focus-visible {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-black);
+}
+.outline.secondary.sm.inverse:active {
+    background-color: var(--color-grey-200);
+    border-color: var(--color-grey-200);
+}
+.outline.secondary.sm.inverse.disabled,
+.outline.secondary.sm.inverse[disabled] {
+    color: var(--color-grey-100);
+}
 
 .outline.secondary.sm {
     border-color: var(--color-blue-500);

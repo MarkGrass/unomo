@@ -5,7 +5,7 @@ import { useState } from 'react';
 import cn, { clsx } from 'clsx';
 
 import { ROUTES } from '@const/routes';
-import { CrossIcon, LogoIcon, MenuIcon } from '@icons';
+import { CrossIcon, LogoIcon, MenuIcon, PhoneIcon } from '@icons';
 
 import { Button } from '../button';
 import { Navigation } from '../navigation';
@@ -33,6 +33,18 @@ export const Header: FC<HeaderProps> = ({ inverse = false }) => {
         >
             <Button className={styles.logo} href={ROUTES.ROOT} variant="ghost">
                 <LogoIcon />
+            </Button>
+
+            <Button
+                inverse
+                className={styles.mainCall}
+                color="secondary"
+                href="tel:+7 (495) 118-22-02"
+                iconLeft={<PhoneIcon className={styles.callIcon} />}
+                size="sm"
+                variant="outline"
+            >
+                +7 (495) 118-22-02
             </Button>
 
             <Button

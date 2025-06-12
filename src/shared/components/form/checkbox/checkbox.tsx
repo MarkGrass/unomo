@@ -1,5 +1,5 @@
 'use client';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
 import cn from 'clsx';
@@ -10,7 +10,7 @@ import styles from './checkbox.module.css';
 
 type CheckboxProps = {
     name: string;
-    label: string;
+    label: ReactNode;
     className?: string;
 };
 

@@ -103,6 +103,7 @@
     letter-spacing: 0.4px;
 }
 
+.agreements,
 .policy {
     margin-top: var(--spacer-sm);
     display: block;
@@ -303,7 +304,13 @@
         margin-left: var(--spacer-xs);
         margin-right: auto;
     }
-
+    .docs {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacer-lg);
+    }
+    .agreements,
     .policy {
         margin: 0;
     }

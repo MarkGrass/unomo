@@ -30,6 +30,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     href = '',
     form = '',
     className = '',
+    inverse = false,
     disabled = false,
     type = 'button',
     color = 'primary',
@@ -44,6 +45,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     const classes = cn({
         [styles.button]: true,
         [styles.disabled]: disabled,
+        [styles.inverse]: inverse,
         [styles[color]]: true,
         [styles[size]]: true,
         [styles[variant]]: true,

@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
 import cn from 'clsx';
+import Link from 'next/link';
 
 import { Button, Checkbox, Input, PhoneInput, Textarea } from '@ui';
 
@@ -24,8 +25,27 @@ export const Application: FC = () => {
 
     const { handleSubmit } = methods;
 
-    const onSubmit = (values: RequestFields) => {
-        console.log(values);
+    const onSubmit = async (data: RequestFields) => {
+        const requestData = JSON.stringify(data);
+
+        await Promise.all([
+            // fetch('/api/send-lead', {
+            //     method: 'POST',
+            //     body: requestData,
+            // }),
+            fetch('/api/send-email', {
+                method: 'POST',
+                body: requestData,
+            }),
+            // fetch('/api/send-tg', {
+            //     method: 'POST',
+            //     body: requestData,
+            // }).then((r) => r.json()),
+        ])
+            .then((r) => {
+                console.log(r);
+                return r;
+            });
     };
 
     return (
@@ -34,6 +54,7 @@ export const Application: FC = () => {
                 Расскажите, что случилось —<br className="break-d" />
                 поможем разобраться!
             </h2>
+
             <p className={styles.description}>
                 Заполните короткую форму — юрист свяжется с вами в ближайшее время
             </p>
@@ -66,7 +87,14 @@ export const Application: FC = () => {
                     />
                     <Checkbox
                         className={cn(styles.control, styles.agreement)}
-                        label="Я даю согласие на обработку персональных данных"
+                        label={
+                            <>
+                                Я даю согласие на{' '}
+                                <Link href="/soglasie_na_obrabotku.pdf" target="_blank">
+                                    обработку персональных данных
+                                </Link>
+                            </>
+                        }
                         name="agreement"
                     />
 

@@ -15,7 +15,7 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
     title = 'Unomo',
     description = 'Оказание юридической помощи',
     keywords = 'юрист, юридическая помощь, юридическая консультация, правовая поддержка, защита в суде',
-    phone = '+7 968 461 14 36',
+    phone = '+7 (495) 118-22-02',
     image = '/unomo.png',
     url = '',
     children,

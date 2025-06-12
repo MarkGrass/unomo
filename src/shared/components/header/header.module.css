@@ -3,7 +3,8 @@
     padding: 0 0 0 var(--spacer-lg);
     height: var(--header-height);
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: var(--spacer-sm);
     align-items: center;
     border-radius: var(--radius-lg);
     background: rgb(var(--color-white-alpha) / 0.1);
@@ -13,6 +14,13 @@
     right: 0;
     left: 0;
     top: 0;
+}
+
+.mainCall {
+    padding: var(--spacer-sm);
+    max-width: 180px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 .inverse {
@@ -42,7 +50,7 @@
 }
 
 .toggle {
-    padding: 0 var(--spacer-lg);
+    padding: 0 var(--spacer-md) 0 0;
 }
 
 .toggle.expanded {
@@ -50,8 +58,11 @@
 }
 
 @media (min-width: 1199px) {
+    .mainCall {
+        display: none;
+    }
     .header {
-        margin: auto;
+        margin: 24px auto;
         padding: 0 var(--spacer-2xl);
         height: 68px;
         max-width: calc(var(--viewport-width) - (2 * var(--spacer-xl)));

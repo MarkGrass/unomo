@@ -50,12 +50,12 @@ export const Navigation: FC<NavigationProps> = ({ inverse = false, visible = fal
             <Button
                 className={styles.call}
                 color={inverse ? 'primary' : 'secondary'}
-                href="tel:+7 968 461 14 36"
+                href="tel:+7 (495) 118-22-02"
                 iconLeft={<PhoneIcon className={styles.callIcon} />}
                 size="sm"
                 variant="outline"
             >
-                +7 968 461 14 36
+                +7 (495) 118-22-02
             </Button>
         </div>
     );

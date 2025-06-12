@@ -83,14 +83,14 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
                 <div className={styles.messengers}>
                     <Button
                         className={styles.messenger}
-                        href="https://wa.me/+79684611436"
+                        href="https://wa.me/+74951182202"
                         iconLeft={<WhatsappIcon className={styles.icon} />}
                         variant="ghost"
                     />
 
                     <Button
                         className={styles.messenger}
-                        href="https://t.me/+79684611436"
+                        href="https://t.me/+74951182202"
                         iconLeft={<TelegramIcon className={styles.icon} />}
                         variant="ghost"
                     />
@@ -101,9 +101,22 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
                 <p className={styles.organization}>ИП Глазырин Егор Владимирович</p>
                 <p className={styles.code}>ОГРНИП323508100514648 ИНН741307647394</p>
 
-                <Link className={styles.policy} href="/policy">
-                    Политика конфиденциальности
-                </Link>
+                <div className={styles.docs}>
+                    <Link
+                        className={styles.agreements}
+                        href="/soglasie_na_obrabotku.pdf"
+                        target="_blank"
+                    >
+                        Согласие на обработку персональных данных
+                    </Link>
+                    <Link
+                        className={styles.policy}
+                        href="/politika_konfidencialnosti.pdf"
+                        target="_blank"
+                    >
+                        Политика конфиденциальности
+                    </Link>
+                </div>
             </aside>
         </footer>
     );
