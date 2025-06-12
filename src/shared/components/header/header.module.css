@@ -51,7 +51,7 @@
 
 @media (min-width: 1199px) {
     .header {
-        margin: auto;
+        margin: 24px auto;
         padding: 0 var(--spacer-2xl);
         height: 68px;
         max-width: calc(var(--viewport-width) - (2 * var(--spacer-xl)));
