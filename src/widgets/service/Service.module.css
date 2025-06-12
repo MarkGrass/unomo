@@ -24,7 +24,7 @@
     margin-top: var(--spacer-sm);
     color: var(--additional-white);
     font: var(--text-300);
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 .info {
     position: relative;
@@ -59,7 +59,7 @@
     }
 
     .title {
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
     }
 
     .info {

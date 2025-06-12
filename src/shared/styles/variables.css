@@ -85,24 +85,24 @@
 
     /* Gradients ======================= */
     --gradient-root: linear-gradient(
-            45deg,
-            var(--color-blue-100) 40%,
-            var(--color-blue-200)
+        45deg,
+        var(--color-blue-100) 40%,
+        var(--color-blue-200)
     );
     --gradient-primary: linear-gradient(
-            105.49deg,
-            var(--color-blue-100),
-            var(--color-blue-200)
+        105.49deg,
+        var(--color-blue-100),
+        var(--color-blue-200)
     );
     --gradient-secondary: linear-gradient(
-            89.93deg,
-            var(--color-blue-100),
-            var(--color-blue-300)
+        89.93deg,
+        var(--color-blue-100),
+        var(--color-blue-300)
     );
     --gradient-terthiary: linear-gradient(
-            155.7deg,
-            var(--color-blue-100) 15.55%,
-            var(--color-blue-200) 84.45%
+        155.7deg,
+        var(--color-blue-100) 15.55%,
+        var(--color-blue-200) 84.45%
     );
 
     /* Shadows ========================= */

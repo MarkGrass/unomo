@@ -5,7 +5,6 @@ import cn from 'clsx';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 
-import { useResize } from '@hooks';
 import { MarkIcon } from '@icons';
 
 import styles from './illustration.module.css';

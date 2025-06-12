@@ -16,12 +16,11 @@
     margin-top: var(--spacer-lg);
     color: var(--color-white);
     font: var(--head-100);
-
 }
 
 .description {
     margin-top: 2px;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
     color: var(--additional-white);
     font: var(--text-200);
 }
@@ -54,7 +53,7 @@
 .link {
     color: var(--color-white);
     font: var(--text-400-static);
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 
 .communication {
@@ -63,7 +62,7 @@
     color: var(--additional-white);
     font: var(--text-200-static);
     line-height: 11px;
-    letter-spacing: .3px;
+    letter-spacing: 0.3px;
 }
 
 .communication span {
@@ -101,7 +100,7 @@
 .code {
     font: var(--text-300-static);
     line-height: 17px;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 
 .policy {
@@ -200,7 +199,6 @@
         margin-top: 25px;
         flex-direction: row;
         justify-content: flex-start;
-
     }
 
     .action {

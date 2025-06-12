@@ -24,7 +24,7 @@
     margin-top: var(--spacer-sm);
     color: var(--additional-white);
     font: var(--text-300);
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 
 .actions {
@@ -58,7 +58,7 @@
     .title {
         margin-top: 19px;
         font-weight: 600;
-        letter-spacing: .15px;
+        letter-spacing: 0.15px;
     }
 
     .info {
@@ -68,7 +68,7 @@
 
     .description {
         max-width: 80%;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
     }
 
     .actions {

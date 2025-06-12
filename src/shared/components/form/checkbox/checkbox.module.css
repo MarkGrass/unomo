@@ -32,13 +32,13 @@
 
     border-radius: var(--radius-2xs);
     box-shadow: inset 0 0 0 2px var(--border-color);
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .pointer svg {
     opacity: 0;
 
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .pointer:focus {
@@ -54,5 +54,7 @@
 }
 
 .error .pointer {
-    box-shadow: inset 0 0 0 1px var(--color-red), 0 0 0 2px rgb(var(--color-red-alpha) / .3);
+    box-shadow:
+        inset 0 0 0 1px var(--color-red),
+        0 0 0 2px rgb(var(--color-red-alpha) / 0.3);
 }

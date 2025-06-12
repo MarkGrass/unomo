@@ -7,7 +7,7 @@
 
 .header {
     font: var(--head-300);
-    letter-spacing: -.25px;
+    letter-spacing: -0.25px;
 }
 
 .description {
@@ -80,7 +80,6 @@
     margin-top: 127px;
 }
 
-
 .civil {
     background-image: url('../../shared/assets/ui/civil.png');
     background-size: 100px;
@@ -98,7 +97,6 @@
 .estate .title {
     margin-top: 128px;
 }
-
 
 .consumer {
     background-image: url('../../shared/assets/ui/consumer.png');
@@ -152,7 +150,7 @@
 }
 .banks .title {
     margin-top: 128px;
-    letter-spacing: -.25px;
+    letter-spacing: -0.25px;
 }
 
 .fraud {
@@ -163,7 +161,6 @@
 .fraud .title {
     margin-top: 137px;
 }
-
 
 @media (min-width: 1199px) {
     .services {
@@ -178,7 +175,7 @@
     .description {
         margin-top: 16px;
         font-weight: 500;
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
     }
 
     .list {

@@ -18,7 +18,7 @@
     grid-row-gap: 7px;
     grid-template-areas: 'icon title' 'icon description';
     background-color: rgb(var(--color-white-alpha) / 1);
-    transition: background-color .3s;
+    transition: background-color 0.3s;
 }
 
 .icon {
@@ -45,7 +45,7 @@
     display: block;
     font: var(--text-600);
     color: var(--color-black);
-    transition: color .15s;
+    transition: color 0.15s;
 }
 
 .description {
@@ -53,7 +53,7 @@
     color: var(--additional-black);
     font: var(--text-200);
     font-weight: 500;
-    transition: color .15s;
+    transition: color 0.15s;
 }
 
 .item:hover {
@@ -101,7 +101,7 @@
 
     .title {
         margin-top: 19px;
-        letter-spacing: .2px;
+        letter-spacing: 0.2px;
     }
 
     .description {

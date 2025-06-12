@@ -21,7 +21,7 @@
 .info p {
     margin-top: 10px;
     font: var(--text-100-static);
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 
 .info p:last-of-type {

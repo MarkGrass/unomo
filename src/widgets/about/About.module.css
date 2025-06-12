@@ -49,7 +49,7 @@
 .cite {
     padding: var(--spacer-lg) 0 101px;
     font: var(--text-300);
-    letter-spacing: .35px;
+    letter-spacing: 0.35px;
     color: var(--color-black);
 }
 
@@ -79,7 +79,7 @@
 
     .head {
         margin: 0;
-        letter-spacing: .4px;
+        letter-spacing: 0.4px;
         line-height: 49px;
         grid-area: head;
         max-width: 100%;

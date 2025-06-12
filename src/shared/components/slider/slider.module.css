@@ -45,7 +45,7 @@
 .position {
     margin-bottom: 11px;
     font: var(--text-200);
-    letter-spacing: .35px;
+    letter-spacing: 0.35px;
 }
 
 .exp {
@@ -55,7 +55,7 @@
 
 .price {
     font: var(--text-200);
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .pointer {
@@ -89,7 +89,7 @@
 
     .title {
         margin-bottom: 51px;
-        letter-spacing: .13px;
+        letter-spacing: 0.13px;
     }
 
     .controls {
@@ -157,15 +157,15 @@
 
     .position {
         margin-bottom: var(--spacer-lg);
-        letter-spacing: .5px;
+        letter-spacing: 0.5px;
         line-height: 19px;
     }
 
     .exp {
-        letter-spacing: .2px;
+        letter-spacing: 0.2px;
     }
     .price {
-        letter-spacing: .6px;
+        letter-spacing: 0.6px;
         line-height: 19px;
     }
 

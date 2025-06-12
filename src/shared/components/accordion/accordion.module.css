@@ -43,7 +43,7 @@
 .item p {
     padding-top: 10px;
     font: var(--text-300);
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     white-space: pre-line;
     color: var(--additional-black);
 }

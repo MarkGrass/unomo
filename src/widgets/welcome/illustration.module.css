@@ -18,7 +18,7 @@
     justify-content: center;
     border: 1px solid var(--color-white);
     border-radius: var(--radius-2xs);
-    background: rgb(var(--color-white-alpha) / .15);
+    background: rgb(var(--color-white-alpha) / 0.15);
     backdrop-filter: blur(32px);
     color: var(--color-white);
     position: absolute;
@@ -44,7 +44,7 @@
 .description {
     margin-top: 3px;
     font: var(--text-100);
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
 }
 
 @media (min-width: 768px) {

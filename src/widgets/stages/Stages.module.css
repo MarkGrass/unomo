@@ -61,7 +61,6 @@
     content: attr(data-count);
 }
 
-
 .title {
     grid-area: title;
     font: var(--text-500);
@@ -73,7 +72,7 @@
     grid-area: description;
     font: var(--text-200);
     line-height: 17px;
-    letter-spacing: .2px;
+    letter-spacing: 0.2px;
     color: var(--additional-black);
 }
 
@@ -95,7 +94,6 @@
         margin: var(--spacer-sm) 0 var(--spacer-md);
         max-width: 65%;
     }
-
 
     .list {
         padding: 36px 0;
@@ -142,7 +140,7 @@
     .description {
         margin-top: var(--spacer-2xs);
         line-height: 19px;
-        letter-spacing: .4px;
+        letter-spacing: 0.4px;
     }
 
     .call {

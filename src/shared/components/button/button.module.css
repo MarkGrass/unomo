@@ -23,7 +23,7 @@
 .md {
     padding: 0 var(--spacer-xl);
     font: var(--text-400-static);
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
     gap: var(--spacer-sm);
     height: 48px;
     border-radius: var(--radius-sm);
