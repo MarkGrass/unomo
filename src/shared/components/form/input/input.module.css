@@ -1,6 +1,7 @@
 .label {
     margin-bottom: 11px;
-    font: var(--text-200);
+    margin-left: 3px;
+    font: var(--text-200-static);
     font-weight: 500;
     display: block;
 }
@@ -12,7 +13,8 @@
 
 .input {
     width: 100%;
-    padding: var(--spacer-sm) var(--spacer-lg);
+    font: var(--text-400-static);
+    padding: 15px var(--spacer-lg) 13px;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-sm);
     -moz-appearance: textfield;

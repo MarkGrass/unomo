@@ -3,40 +3,42 @@
 }
 
 .wrapper {
-    padding: 96px var(--spacer-md) 100px;
+    padding: 75px var(--spacer-md) 100px;
     margin: auto;
     max-width: var(--viewport-width);
     text-align: center;
 }
 
 .illustration {
-    margin: 0 auto;
+    margin: 21px auto 0;
     width: 170px;
     height: 184px;
 }
 
 .head {
     margin-top: var(--spacer-3xl);
-    font: var(--text-600);
-    font-weight: 600;
+    font: var(--head-200);
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 1px;
     color: var(--color-white);
 }
 
 .message {
-    margin-top: var(--spacer-xs);
+    margin-top: 8px;
     font: var(--text-200);
-    font-weight: 500;
+    line-height: 14px;
     color: var(--additional-white);
 }
 
 .action {
-    margin-top: 32px;
+    margin-top: 52px;
     width: 100%;
 }
 
 @media (min-width: 1199px) {
     .wrapper {
-        padding: 120px var(--spacer-2xl);
+        padding: 96px var(--spacer-2xl);
         max-width: 800px;
     }
 
@@ -47,17 +49,17 @@
     }
 
     .head {
-        font: var(--text-850);
+        line-height: 39px;
     }
 
     .message {
-        margin:  var(--spacer-sm) auto;
+        margin: 15px auto;
+        line-height: 22px;
         padding: 0;
-        font: var(--text-400);
     }
 
     .action {
-        margin: var(--spacer-3xl) auto;
+        margin: 29px auto;
         max-width: 230px;
     }
 }

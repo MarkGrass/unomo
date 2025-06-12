@@ -11,7 +11,7 @@ export default function LightLayout({
     return (
         <>
             <Meta />
-            <Header color="white" />
+            <Header inverse />
             <main>{children}</main>
             <Footer />
         </>

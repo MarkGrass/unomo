@@ -17,7 +17,7 @@
     z-index: -1;
 }
 .label {
-    font: var(--text-100);
+    font: var(--text-200-static);
     line-height: 20px;
 }
 

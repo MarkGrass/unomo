@@ -30,8 +30,14 @@ export const Services: FC = () => {
         },
         {
             key: 'civil',
-            title: `Гражданские споры
-            и суды`,
+            title: (
+                <>
+                    Гражданские
+                    <br className="break-m" />
+                    споры&nbsp;
+                    <br className="break-d" />и суды
+                </>
+            ),
             path: '/civil',
         },
         {
@@ -97,7 +103,7 @@ export const Services: FC = () => {
                         color="white"
                         key={service.key}
                     >
-                        <h3 className={styles.title}>{service.title}</h3>
+                        <strong className={styles.title}>{service.title}</strong>
 
                         <Button
                             className={styles.link}

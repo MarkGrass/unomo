@@ -1,12 +1,13 @@
 .payment {
+    margin-bottom: 145px;
     padding: var(--spacer-md);
     max-width: 632px;
 }
 .form {
-    margin-top: var(--spacer-3xl);
+    margin-top: 104px;
 }
 .control {
-    margin-bottom: var(--spacer-lg);
+    margin-bottom: 22px;
 }
 .action {
     width: 100%;
@@ -14,20 +15,23 @@
 
 .info {
     text-align: center;
-    font-size: 12px;
-    line-height: normal;
-    font-weight: 500;
     color: var(--additional-black);
 }
 
 .info p {
-    margin-top: var(--spacer-sm);
+    margin-top: 10px;
+    font: var(--text-100-static);
+    letter-spacing: .4px;
 }
 
-.commission {
+.info p:last-of-type {
+    margin-top: 15px;
+}
+
+.info .commission {
+    margin-top: 18px;
     margin-bottom: var(--spacer-2xs);
-    font: var(--text-200);
-    font-weight: 700;
+    font: var(--text-200-static);
     color: var(--color-black);
 }
 
@@ -48,15 +52,11 @@
 }
 
 .legalAddress {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 500;
+    font: var(--text-200-static);
 }
 
 .legalAddress summary {
-    font-size: 12px;
-    line-height: normal;
-    font-weight: 500;
+    font: var(--text-100-static);
     text-align: center;
     cursor: pointer;
     color: var(--color-primary);
@@ -67,15 +67,17 @@
 }
 
 .legalAddress p {
-    padding: var(--spacer-lg) 0;
+    padding: 19px 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--spacer-md);
+    font: var(--text-300);
+    gap: 8px;
     border-bottom: 1px solid var(--border-color);
 }
 
 .group {
+    margin-top: 28px;
     font-weight: 700;
 }
 
@@ -90,16 +92,19 @@
 
 @media (min-width: 1199px) {
     .payment {
-        margin: 72px auto var(--spacer-3xl);
+        margin: 0 auto 150px;
+    }
+
+    .form {
+        margin-top: 122px;
+    }
+
+    .group {
+        margin-top: 22px;
     }
 
     .control {
-        margin-bottom: var(--spacer-2xl);
-    }
-
-    .legalAddress {
-        font-size: 16px;
-        line-height: 24px;
+        margin-bottom: 26px;
     }
 
     .legalAddress .label {

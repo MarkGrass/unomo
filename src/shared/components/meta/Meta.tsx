@@ -45,7 +45,7 @@ export const Meta: FC<PropsWithChildren<MetaProps>> = ({
                 rel="preconnect"
             />
             <link
-                href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@400..700&display=swap"
+                href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@100..900&display=swap"
                 rel="stylesheet"
             />
 

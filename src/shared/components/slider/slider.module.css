@@ -4,8 +4,7 @@
 
 .title {
     margin-bottom: var(--spacer-3xl);
-    font: var(--text-600);
-    font-weight: 600;
+    font: var(--head-300);
 }
 
 .controls {
@@ -38,35 +37,34 @@
 }
 
 .name {
-    font: var(--text-500);
-    font-weight: 500;
+    margin-bottom: 6px;
+    font: var(--text-600);
     white-space: pre-line;
-    margin-bottom: var(--spacer-2xs);
 }
 
 .position {
-    margin-bottom: var(--spacer-sm);
+    margin-bottom: 11px;
     font: var(--text-200);
-    font-weight: 500;
+    letter-spacing: .35px;
 }
 
 .exp {
     font: var(--text-200);
-    font-weight: 500;
     color: var(--additional-white);
 }
 
 .price {
     font: var(--text-200);
-    font-weight: 500;
+    letter-spacing: .5px;
 }
 
 .pointer {
     margin: var(--spacer-md) auto;
+    max-width: 216px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--spacer-sm);
+    gap: 8px;
 }
 
 .point {
@@ -90,12 +88,12 @@
     }
 
     .title {
-        margin-bottom: var(--spacer-4xl);
-        font: var(--text-900);
-        font-weight: 600;
+        margin-bottom: 51px;
+        letter-spacing: .13px;
     }
 
     .controls {
+        margin-top: -5px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
@@ -153,26 +151,22 @@
     }
 
     .name {
-        margin-bottom: var(--spacer-2xs);
-        font: var(--text-600);
-        font-weight: 500;
+        margin-bottom: 9px;
+        line-height: 29px;
     }
 
     .position {
         margin-bottom: var(--spacer-lg);
-        font: var(--text-300);
-        font-weight: 400;
+        letter-spacing: .5px;
+        line-height: 19px;
     }
 
     .exp {
-        font: var(--text-300);
-        font-weight: 400;
-        color: var(--additional-white);
+        letter-spacing: .2px;
     }
-
     .price {
-        font: var(--text-300);
-        font-weight: 400;
+        letter-spacing: .6px;
+        line-height: 19px;
     }
 
     .pointer {

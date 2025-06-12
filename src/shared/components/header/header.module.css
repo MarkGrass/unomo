@@ -1,7 +1,7 @@
 .header {
-    margin: var(--spacer-sm);
+    margin: var(--header-offset);
     padding: 0 0 0 var(--spacer-lg);
-    min-height: 56px;
+    height: var(--header-height);
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -9,13 +9,13 @@
     background: rgb(var(--color-white-alpha) / 0.1);
     backdrop-filter: blur(48px);
     position: absolute;
-    z-index: var(--level-header);
+    z-index: var(--level-super);
     right: 0;
     left: 0;
     top: 0;
 }
 
-.header.white {
+.inverse {
     background-color: var(--color-white);
     backdrop-filter: none;
     box-shadow: var(--shadow-primary);
@@ -37,7 +37,7 @@
     width: 89px;
     height: 24px;
 }
-.white .toggle {
+.inverse .toggle {
     --icon-color: var(--color-black);
 }
 
@@ -51,7 +51,7 @@
 
 @media (min-width: 1199px) {
     .header {
-        margin: var(--spacer-xl) auto 0;
+        margin: auto;
         padding: 0 var(--spacer-2xl);
         height: 68px;
         max-width: calc(var(--viewport-width) - (2 * var(--spacer-xl)));
@@ -65,7 +65,4 @@
         width: 120px;
         height: 32px;
     }
-}
-
-@media (min-width: 1440px) {
 }

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import styles from './button.module.css';
 
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonSize = 'sm' | 'md';
 export type ButtonVariant = 'default' | 'outline' | 'ghost';
 export type ButtonColor = 'primary' | 'secondary';
 export type ButtonType = HTMLButtonElement['type'];

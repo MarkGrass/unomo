@@ -27,8 +27,8 @@ export const Footer: FC<FooterProps> = ({ className = '' }) => {
 
                 <h3 className={styles.title}>Оказание юридической помощи</h3>
                 <p className={styles.description}>
-                    Дадим чёткий план действий и начнём помогать уже с первой консультации
-                    - без лишних затрат и потери времени!
+                    Дадим чёткий план действий и начнём помогать уже с первой<br className="break-d" />
+                    консультации - без лишних затрат и потери времени!
                 </p>
 
                 <div className={styles.actions}>

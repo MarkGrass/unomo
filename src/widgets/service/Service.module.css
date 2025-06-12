@@ -1,4 +1,4 @@
-.auto {
+.service {
     overflow: hidden;
     padding: var(--spacer-2xs) 0 var(--spacer-4xl);
     background-color: var(--color-blue-100);
@@ -14,9 +14,8 @@
 
 .title {
     padding: 0 var(--spacer-md);
-    margin-top: var(--spacer-lg);
     color: var(--color-white);
-    font: var(--text-700);
+    font: var(--head-400);
     font-weight: 600;
 }
 
@@ -24,7 +23,8 @@
     padding: 0 var(--spacer-md);
     margin-top: var(--spacer-sm);
     color: var(--additional-white);
-    font: var(--text-200);
+    font: var(--text-300);
+    letter-spacing: .4px;
 }
 .info {
     position: relative;
@@ -45,8 +45,8 @@
 }
 
 @media (min-width: 1199px) {
-    .auto {
-        padding: 40px 0 60px;
+    .service {
+        padding: 26px 0;
         overflow: hidden;
     }
 
@@ -59,18 +59,18 @@
     }
 
     .title {
-        font: var(--text-1000);
-        font-weight: 600;
+        letter-spacing: .5px;
     }
 
     .info {
-        margin-top: -20px;
+        margin-top: 50px;
         padding-left: 32px;
     }
 
     .description {
+        margin-top: 14px;
         max-width: 80%;
-        font: var(--text-400);
+        line-height: 22px;
     }
 
     .actions {

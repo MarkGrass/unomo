@@ -1,12 +1,12 @@
 .faq {
-    margin: 68px auto 0;
+    margin: 52px auto 0;
     padding: var(--spacer-md);
     max-width: var(--viewport-width);
 }
 
 .head {
     margin-bottom: var(--spacer-sm);
-    font: var(--text-600);
+    font: var(--head-300);
     font-weight: 600;
 }
 
@@ -19,7 +19,5 @@
     .head {
         margin: auto;
         text-align: center;
-        font: var(--text-900);
-        font-weight: 600;
     }
 }

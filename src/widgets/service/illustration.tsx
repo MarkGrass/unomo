@@ -16,19 +16,11 @@ type IllustrationProps = {
 };
 
 export const Illustration: FC<IllustrationProps> = ({ src, meta = '' }) => {
-    const { isMobile } = useResize();
-
     return (
         <div aria-label={meta} className={styles.illustration} role="img">
             <MarkIcon className={styles.marker} />
 
-            <Image
-                priority
-                alt=""
-                height={isMobile ? 330 : 570}
-                src={src}
-                width={isMobile ? 375 : 648}
-            />
+            <Image priority alt="" className={styles.image} src={src} />
 
             <div className={cn(styles.stats, styles.clients)}>
                 <span className={styles.title}>500+</span>

@@ -15,7 +15,11 @@ export const About: FC = () => {
     return (
         <section className={styles.about} id="about">
             <article className={styles.founder}>
-                <h2 className={styles.head}>Правовая поддержка на все случаи жизни</h2>
+                <h2 className={styles.head}>
+                    Правовая поддержка
+                    <br className="break-m" />
+                    на все случаи жизни
+                </h2>
 
                 <figure
                     aria-label="Глазырин Егор Владимирович, Основатель"

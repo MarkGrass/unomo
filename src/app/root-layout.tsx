@@ -71,7 +71,7 @@ export default function RootLayout({
                     title={
                         <>
                             Этапы взаимодействия с нашей
-                            <br className="break" /> юридической командой
+                            <br className="break-d" /> юридической командой
                         </>
                     }
                 />

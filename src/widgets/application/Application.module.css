@@ -1,27 +1,26 @@
 .application {
-    margin: 72px auto 0;
+    margin: 68px auto 0;
     padding: var(--spacer-md);
     max-width: var(--viewport-width);
 }
 
 .header {
-    font: var(--text-600);
-    font-weight: 600;
+    font: var(--head-300);
 }
 
 .description {
     margin-top: var(--spacer-xs);
     color: var(--additional-black);
-    font: var(--text-200);
-    font-weight: 500;
+    font: var(--text-300);
+    line-height: 19px;
 }
 
 .form {
-    padding-top: 324px;
+    padding-top: 322px;
     background-image: url('../../shared/assets/ui/app.png');
     background-repeat: no-repeat;
     background-size: 343px;
-    background-position: center var(--spacer-md);
+    background-position: 50% 12px;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -35,7 +34,7 @@
 
 .phone,
 .message {
-    margin-top: 22px;
+    margin-top: 24px;
 }
 .agreement {
     margin-top: 15px;
@@ -46,37 +45,26 @@
     width: 100%;
 }
 
-.break {
-    display: none;
-}
-
 @media (min-width: 1199px) {
     .application {
-        margin-top: 160px;
+        margin-top: 162px;
         padding: 0 var(--spacer-4xl);
     }
 
     .header {
-        font: var(--text-900);
-        font-weight: 600;
-    }
-
-    .break {
-        display: initial;
+        line-height: 48px;
     }
 
     .description {
         margin-top: var(--spacer-sm);
-        font: var(--text-400);
-        font-weight: 500;
     }
 
     .form {
-        padding: var(--spacer-4xl) 0 0;
+        padding: 52px 0 0;
         background-image: url('../../shared/assets/ui/app.png');
         background-repeat: no-repeat;
-        background-size: 662px;
-        background-position: right top;
+        background-size: 664px;
+        background-position: 100% 0;
         list-style: none;
         display: flex;
         flex-direction: column;
@@ -89,10 +77,10 @@
 
     .phone,
     .message {
-        margin-top: 26px;
+        margin-top: 27px;
     }
     .agreement {
-        margin-top: 19px;
+        margin-top: 20px;
     }
 
     .action {

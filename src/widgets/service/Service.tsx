@@ -37,7 +37,7 @@ export const Service: FC<ServiceProps> = ({
 }) => {
     return (
         <>
-            <section className={styles.auto}>
+            <section className={styles.service}>
                 <div className={styles.wrapper}>
                     <Illustration meta={meta} src={illustration} />
 

@@ -40,7 +40,7 @@ export const Stats: FC = () => {
                     <div aria-label={item.description} className={styles.icon} role="img">
                         {item.icon}
                     </div>
-                    <h3 className={styles.title}>{item.title}</h3>
+                    <strong className={styles.title}>{item.title}</strong>
                     <p className={styles.description}>{item.description}</p>
                 </Card>
             ))}

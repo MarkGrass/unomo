@@ -13,22 +13,22 @@ import { Navigation } from '../navigation';
 import styles from './header.module.css';
 
 type HeaderProps = {
+    inverse?: boolean;
     color?: 'default' | 'white';
 };
 
-export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
+export const Header: FC<HeaderProps> = ({ inverse = false }) => {
     const [expanded, setExpanded] = useState(false);
 
     const toggleMenu = () => {
         setExpanded(!expanded);
     };
-    const onMenuExpand = () => {};
 
     return (
         <header
             className={clsx({
                 [styles.header]: true,
-                [styles[color]]: true,
+                [styles.inverse]: inverse,
             })}
         >
             <Button className={styles.logo} href={ROUTES.ROOT} variant="ghost">
@@ -48,7 +48,7 @@ export const Header: FC<HeaderProps> = ({ color = 'default' }) => {
                 onClick={toggleMenu}
             />
 
-            <Navigation color={color} visible={expanded} onExpand={onMenuExpand} />
+            <Navigation inverse={inverse} visible={expanded} />
         </header>
     );
 };

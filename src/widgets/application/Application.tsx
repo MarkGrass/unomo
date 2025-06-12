@@ -31,7 +31,7 @@ export const Application: FC = () => {
     return (
         <section className={styles.application} id="application">
             <h2 className={styles.header}>
-                Расскажите, что случилось —<br className={styles.break} />
+                Расскажите, что случилось —<br className="break-d" />
                 поможем разобраться!
             </h2>
             <p className={styles.description}>

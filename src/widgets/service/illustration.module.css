@@ -1,4 +1,5 @@
 .illustration {
+    margin-bottom: -15px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -8,6 +9,7 @@
 
 .illustration:before {
     content: '';
+    margin-bottom: 50px;
     min-width: 754px;
     background-color: var(--color-blue-100);
     border-radius: var(--radius-round);
@@ -16,11 +18,16 @@
     z-index: var(--level-down);
 }
 
+.image {
+    margin-top: 50px;
+    width: 330px;
+}
+
 .marker {
     width: 32px;
     position: absolute;
-    top: 81px;
-    left: 29px;
+    top: 85px;
+    left: calc(100% - 110px);
 }
 
 .stats {
@@ -37,21 +44,25 @@
 }
 
 .stats.clients {
-    bottom: 82px;
-    left: 32px;
+    bottom: 138px;
+    left: 33px;
 }
 
 .stats.cases {
-    bottom: 44px;
-    right: 37px;
+    bottom: 88px;
+    right: 54px;
 }
 
+
 .title {
-    font: var(--text-400);
+    font: var(--text-700);
+    letter-spacing: 2px;
 }
 
 .description {
-    font: var(--text-50);
+    margin-top: 3px;
+    font: var(--text-100);
+    letter-spacing: .4px;
 }
 
 @media (min-width: 1199px) {
@@ -63,40 +74,34 @@
 
     .marker {
         width: 56px;
-        top: 141px;
-        left: 49px;
+        top: 138px;
+        left: calc(100% - 164px);
     }
-
+    .image {
+        margin-left: -50px;
+        width: 100%;
+    }
     .illustration:before {
         margin: auto;
         width: 1250px;
         height: 1250px;
         bottom: 0;
-        left: -25%;
+        left: -10%;
         top: 0;
     }
 
     .stats {
         padding: var(--spacer-sm) var(--spacer-lg);
         border-radius: var(--radius-sm);
-        opacity: .65;
     }
 
     .stats.clients {
-        bottom: 120px;
-        left: -75px;
+        bottom: 174px;
+        left: 38px;
     }
 
     .stats.cases {
-        bottom: 20px;
-        right: 65px;
-    }
-
-    .title {
-        font: var(--text-800);
-    }
-
-    .description {
-        font: var(--text-100);
+        bottom: 43px;
+        right: 102px;
     }
 }

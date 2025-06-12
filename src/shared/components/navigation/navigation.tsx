@@ -11,20 +11,16 @@ import { Button } from '../button';
 import styles from './navigation.module.css';
 
 type NavigationProps = {
+    inverse?: boolean;
     visible: boolean;
-    color?: 'default' | 'white';
-    onExpand: () => void;
 };
-export const Navigation: FC<NavigationProps> = ({
-    color = 'default',
-    visible = false,
-}) => {
+export const Navigation: FC<NavigationProps> = ({ inverse = false, visible = false }) => {
     return (
         <div
             className={clsx({
-                [styles.collapse]: true,
-                [styles[color]]: true,
-                [styles._visible]: visible,
+                [styles.navigation]: true,
+                [styles.inverse]: inverse,
+                [styles.visible]: visible,
             })}
         >
             <nav className={styles.links}>
@@ -53,7 +49,7 @@ export const Navigation: FC<NavigationProps> = ({
 
             <Button
                 className={styles.call}
-                color="secondary"
+                color={inverse ? 'primary' : 'secondary'}
                 href="tel:+7 968 461 14 36"
                 iconLeft={<PhoneIcon className={styles.callIcon} />}
                 size="sm"

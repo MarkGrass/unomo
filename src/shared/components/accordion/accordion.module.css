@@ -7,9 +7,10 @@
 }
 
 .item summary {
-    font: var(--text-300);
-    font-weight: 600;
+    font: var(--text-500);
+    line-height: 19px;
     display: flex;
+    white-space: pre-line;
     align-items: center;
     justify-content: space-between;
     gap: var(--spacer-lg);
@@ -40,9 +41,10 @@
 }
 
 .item p {
-    padding-top: var(--spacer-sm);
-    font: var(--text-200);
-    font-weight: 500;
+    padding-top: 10px;
+    font: var(--text-300);
+    letter-spacing: .5px;
+    white-space: pre-line;
     color: var(--additional-black);
 }
 
@@ -67,13 +69,14 @@
     .item {
         padding: var(--spacer-3xl) 0;
     }
+
     .item:first-of-type {
-        padding: var(--spacer-lg) 0 var(--spacer-3xl);
+        padding: 24px 0 var(--spacer-3xl);
     }
 
     .item summary {
-        font: var(--text-600);
-        font-weight: 600;
+        white-space: wrap;
+        line-height: 30px;
     }
 
     .item .pointer {
@@ -86,6 +89,7 @@
         height: 24px;
     }
     .item p {
-        font: var(--text-400);
+        padding-top: 15px;
+        line-height: 21px;
     }
 }

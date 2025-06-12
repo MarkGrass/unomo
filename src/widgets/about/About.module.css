@@ -1,21 +1,18 @@
 .about {
-    margin: 50px auto 0;
+    margin: 52px auto 0;
     max-width: var(--viewport-width);
     padding: var(--spacer-md);
 }
 
 .head {
-    margin-bottom: var(--spacer-3xl);
-    font: var(--text-600);
-    font-weight: 600;
-    max-width: 80%;
+    font: var(--head-300);
+    margin-bottom: 33px;
 }
 
 .founder {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto max-content;
-
 }
 
 .photo {
@@ -42,24 +39,22 @@
 
 .name {
     margin-bottom: var(--spacer-2xs);
-    font: var(--text-500);
-    font-weight: 600;
+    font: var(--text-600);
 }
 
 .position {
     font: var(--text-200);
-    font-weight: 500;
 }
 
 .cite {
-    padding: var(--spacer-lg) 0 100px;
-    font: var(--text-200);
-    font-weight: 400;
+    padding: var(--spacer-lg) 0 101px;
+    font: var(--text-300);
+    letter-spacing: .35px;
     color: var(--color-black);
 }
 
 .sign {
-    margin: auto;
+    margin-left: 72px;
     display: block;
 }
 
@@ -84,9 +79,9 @@
 
     .head {
         margin: 0;
+        letter-spacing: .4px;
+        line-height: 49px;
         grid-area: head;
-        font: var(--text-900);
-        font-weight: 600;
         max-width: 100%;
     }
 
@@ -96,7 +91,6 @@
 
     .name {
         margin-bottom: var(--spacer-xs);
-        font: var(--text-600);
         font-weight: 600;
     }
 
@@ -106,17 +100,15 @@
     }
 
     .cite {
+        padding-bottom: 180px;
         grid-area: cite;
-        font: var(--text-400);
-        font-weight: 400;
+        line-height: 22px;
     }
 
     .sign {
-        margin: var(--spacer-sm) var(--spacer-sm) auto auto;
+        margin-left: auto;
+        margin-right: 14px;
+        margin-top: 5px;
         width: 178px;
-    }
-
-    .employees {
-        margin-top: 70px;
     }
 }

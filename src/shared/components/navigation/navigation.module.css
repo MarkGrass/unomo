@@ -1,4 +1,4 @@
-.collapse {
+.navigation {
     padding: 0 var(--spacer-lg);
     max-height: 0;
     width: 100%;
@@ -12,7 +12,7 @@
     right: 0;
 }
 
-._visible {
+.visible {
     padding-top: 56px;
     max-height: 100vh;
     transition: max-height 0.25s;
@@ -31,26 +31,28 @@
 
 .link {
     color: var(--color-black);
-    font: var(--text-300);
-    font-weight: 500;
+    font: var(--text-400-static);
+}
+.link:hover {
+    color: var(--color-primary);
 }
 
 .call {
     --button-color: var(--color-primary);
     --button-border: var(--color-primary);
     margin: 0 auto var(--spacer-xl);
-    max-width: 320px;
 }
 
-.white .link {
+.inverse .link {
     color: var(--color-black);
 }
 
 @media (min-width: 1199px) {
-    .collapse {
+    .navigation {
         padding: 0;
         position: static;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto;
         align-items: center;
         justify-content: space-between;
         max-height: 100%;
@@ -75,10 +77,9 @@
     .call {
         --button-color: var(--color-white);
         --button-border: var(--color-white);
+        --button-bg: transparent;
         margin: 0;
-    }
+        width: 185px;
 
-    .white .link {
-        color: var(--color-black);
     }
 }

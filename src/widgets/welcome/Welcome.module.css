@@ -1,5 +1,5 @@
 .main {
-    padding: calc(56px + var(--spacer-2xl)) 0 var(--spacer-4xl);
+    padding: 84px 0 48px;
     background-color: var(--color-blue-100);
     background-image: var(--gradient-primary);
     text-align: center;
@@ -13,17 +13,18 @@
 
 .title {
     padding: 0 var(--spacer-md);
-    margin-top: var(--spacer-lg);
+    margin-top: 21px;
     color: var(--color-white);
-    font: var(--text-700);
-    font-weight: 600;
+    font: var(--head-400);
+    letter-spacing: 1.2px;
 }
 
 .description {
     padding: 0 var(--spacer-md);
     margin-top: var(--spacer-sm);
     color: var(--additional-white);
-    font: var(--text-200);
+    font: var(--text-300);
+    letter-spacing: .4px;
 }
 
 .actions {
@@ -42,7 +43,7 @@
 
 @media (min-width: 1199px) {
     .main {
-        padding: 132px 0 60px;
+        padding: 132px 0 58px;
         overflow: hidden;
     }
 
@@ -55,8 +56,9 @@
     }
 
     .title {
-        font: var(--text-1000);
+        margin-top: 19px;
         font-weight: 600;
+        letter-spacing: .15px;
     }
 
     .info {
@@ -66,10 +68,11 @@
 
     .description {
         max-width: 80%;
-        font: var(--text-400);
+        letter-spacing: .5px;
     }
 
     .actions {
+        margin-top: 34px;
         flex-direction: row;
     }
 
