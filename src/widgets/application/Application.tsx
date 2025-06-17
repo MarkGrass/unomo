@@ -29,23 +29,21 @@ export const Application: FC = () => {
         const requestData = JSON.stringify(data);
 
         await Promise.all([
-            // fetch('/api/send-lead', {
-            //     method: 'POST',
-            //     body: requestData,
-            // }),
+            fetch('/api/send-lead', {
+                method: 'POST',
+                body: requestData,
+            }),
             fetch('/api/send-email', {
                 method: 'POST',
                 body: requestData,
             }),
-            // fetch('/api/send-tg', {
-            //     method: 'POST',
-            //     body: requestData,
-            // }).then((r) => r.json()),
-        ])
-            .then((r) => {
-                console.log(r);
-                return r;
-            });
+            fetch('/api/send-tg', {
+                method: 'POST',
+                body: requestData,
+            }).then((r) => r.json()),
+        ]).then(() => {
+            window.location.href = '/confirm';
+        });
     };
 
     return (
